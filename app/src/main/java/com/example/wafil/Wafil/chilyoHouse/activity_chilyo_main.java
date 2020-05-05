@@ -42,11 +42,13 @@ public class activity_chilyo_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chilyo_main);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.main_service_vendor_view);
 
         /** Simulasi login - Hapus ini hen klo smo pake nni punya **/
+        sessionManager = new SessionManager(this);
+        sessionManager.checkLogIn();
         HashMap<String, String> user = sessionManager.getUserDetail();
         getUserId = user.get(SessionManager.user_id);
         //SessionManager.setAuthUserId("2020001", getBaseContext());

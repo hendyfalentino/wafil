@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.MainServiceAndProduct;
+package com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
-import com.example.wafil.Wafil.chilyoHouse.Model.ShoppingCart;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorProduct;
-import com.example.wafil.Wafil.chilyoHouse.ShoppingCart.ActivityShoppingCart;
-import com.example.wafil.Wafil.chilyoHouse.Support.CustomProgressBar;
-import com.example.wafil.Wafil.chilyoHouse.Support.Support;
+import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
+import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
+import com.example.wafil.Wafil.chilyoHouze.Support.CustomProgressBar;
+import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 
 import java.util.HashMap;
 

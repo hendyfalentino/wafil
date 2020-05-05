@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse;
+package com.example.wafil.Wafil.chilyoHouze;
 
 import android.os.Bundle;
 

@@ -14,7 +14,7 @@
         <activity android:name=".Wafil.MenuActivity" ></activity>
         <activity android:name=".Wafil.atorJo.Activity2"
             android:parentActivityName=".Wafil.MenuActivity" />
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_main" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_main" />
         <activity android:name=".Wafil.wafil.CategoryProductActivity" />
         <activity android:name=".Wafil.MainMenuActivity" />
         <activity android:name=".Wafil.LogoutActivity" />
@@ -40,14 +40,14 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
         </activity>
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_makeup" />
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_payment" />
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_user" />
-        <activity android:name=".Wafil.chilyoHouse.Main2Activity" />
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_rating" />
-        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_shopping_cart" />
-        <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.VendorProductDashboard" />
-        <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.ProductDetail" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_makeup" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_payment" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_user" />
+        <activity android:name=".Wafil.chilyoHouze.Main2Activity" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_rating" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_shopping_cart" />
+        <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.VendorProductDashboard" />
+        <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail" />
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />

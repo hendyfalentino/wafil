@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
 import com.example.wafil.Wafil.atorJo.Activity2;
-import com.example.wafil.Wafil.chilyoHouse.activity_chilyo_main;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 
 public class MainMenuActivity extends Fragment {

@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Support;
+package com.example.wafil.Wafil.chilyoHouze.Support;
 
 import android.app.Dialog;
 import android.content.Context;

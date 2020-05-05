@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Adapters;
+package com.example.wafil.Wafil.chilyoHouze.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
-import com.example.wafil.Wafil.chilyoHouse.MainServiceAndProduct.VendorProductDashboard;
-import com.example.wafil.Wafil.chilyoHouse.Model.ShoppingCartGroup;
+import com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct.VendorProductDashboard;
+import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCartGroup;
 
 import java.util.List;
 

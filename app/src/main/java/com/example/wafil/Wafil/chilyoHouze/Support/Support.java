@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Support;
+package com.example.wafil.Wafil.chilyoHouze.Support;
 
 public class Support {
     public static String rupiahFormat(String format){

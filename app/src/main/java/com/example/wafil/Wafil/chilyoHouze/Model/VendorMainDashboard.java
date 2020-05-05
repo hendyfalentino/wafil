@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Model;
+package com.example.wafil.Wafil.chilyoHouze.Model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

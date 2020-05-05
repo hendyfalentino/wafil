@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.ShoppingCart;
+package com.example.wafil.Wafil.chilyoHouze.ShoppingCart;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
-import com.example.wafil.Wafil.chilyoHouse.Adapters.ShoppingCartGroupAdapter;
-import com.example.wafil.Wafil.chilyoHouse.Model.ShoppingCartGroup;
+import com.example.wafil.Wafil.chilyoHouze.Adapters.ShoppingCartGroupAdapter;
+import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCartGroup;
 
 import java.util.HashMap;
 import java.util.List;

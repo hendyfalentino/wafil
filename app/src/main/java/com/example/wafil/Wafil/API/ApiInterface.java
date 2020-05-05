@@ -1,10 +1,10 @@
 package com.example.wafil.Wafil.API;
 
-import com.example.wafil.Wafil.chilyoHouse.Model.ShoppingCart;
-import com.example.wafil.Wafil.chilyoHouse.Model.ShoppingCartGroup;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorMainDashboard;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorMainOnline;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorProduct;
+import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
+import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCartGroup;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainDashboard;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainOnline;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
 import com.example.wafil.Wafil.wafil.Category_Product;
 import com.example.wafil.Wafil.wafil.Product;
 

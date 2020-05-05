@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.MainServiceAndProduct;
+package com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
-import com.example.wafil.Wafil.chilyoHouse.Adapters.MainServiceVendorProductsAdapter;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorMainDashboard;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorProduct;
+import com.example.wafil.Wafil.chilyoHouze.Adapters.MainServiceVendorProductsAdapter;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainDashboard;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

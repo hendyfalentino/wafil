@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Model;
+package com.example.wafil.Wafil.chilyoHouze.Model;
 
 public class ShoppingCart {
     private String id_user;

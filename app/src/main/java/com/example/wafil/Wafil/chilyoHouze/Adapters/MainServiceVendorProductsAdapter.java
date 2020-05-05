@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.chilyoHouse.Adapters;
+package com.example.wafil.Wafil.chilyoHouze.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
-import com.example.wafil.Wafil.chilyoHouse.MainServiceAndProduct.ProductDetail;
-import com.example.wafil.Wafil.chilyoHouse.Model.VendorProduct;
-import com.example.wafil.Wafil.chilyoHouse.Support.Support;
+import com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail;
+import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
+import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 
 import java.util.List;
 

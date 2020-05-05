@@ -10,8 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Wafil.MenuActivity"></activity>
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Wafil.MenuActivity" ></activity>
+        <activity android:name=".Wafil.atorJo.Activity2"
+            android:parentActivityName=".Wafil.MenuActivity" />
         <activity android:name=".Wafil.chilyoHouse.activity_chilyo_main" />
         <activity android:name=".Wafil.wafil.CategoryProductActivity" />
         <activity android:name=".Wafil.MainMenuActivity" />
@@ -46,6 +48,9 @@
         <activity android:name=".Wafil.chilyoHouse.activity_chilyo_shopping_cart" />
         <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.VendorProductDashboard" />
         <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.ProductDetail" />
+        <activity android:name=".Wafil.atorJo.bersihRumah" />
+        <activity android:name=".Wafil.atorJo.pengemasBarang" />
+        <activity android:name=".Wafil.atorJo.bersihKantor" />
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
+import com.example.wafil.Wafil.atorJo.Activity2;
 import com.example.wafil.Wafil.chilyoHouse.activity_chilyo_main;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 
@@ -43,7 +44,7 @@ public class MainMenuActivity extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), activity_chilyo_main.class);
+                Intent intent = new Intent(getActivity(), Activity2.class);
                 startActivity(intent);
             }
         });

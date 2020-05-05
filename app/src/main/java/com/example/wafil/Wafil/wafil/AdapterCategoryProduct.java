@@ -35,6 +35,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
     @Override
     public void onBindViewHolder(@NonNull AdapterCategoryProduct.MyViewHolder holder, int position) {
         holder.name_category_product.setText(category_product.get(position).getName_category_product());
+
     }
 
     @Override

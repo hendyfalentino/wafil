@@ -3,11 +3,10 @@ package com.example.wafil.Wafil.API;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 import com.example.wafil.Wafil.LoginActivity;
 import com.example.wafil.Wafil.LogoutActivity;
-import com.example.wafil.Wafil.MainMenuActivity;
+import com.example.wafil.Wafil.MenuActivity;
 
 import java.util.HashMap;
 
@@ -45,7 +44,7 @@ public class SessionManager {
         if(!this.isLogIn()){
             Intent i = new Intent(context, LoginActivity.class);
             context.startActivity(i);
-            ((MainMenuActivity)context).finish();
+            ((MenuActivity)context).finish();
         }
     }
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
+    android:layout_marginBottom="60dp"
     android:padding="10dp"
     android:background="@color/lightgray">
 
@@ -28,8 +29,9 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/Relative">
 
         <LinearLayout
@@ -39,8 +41,9 @@
             android:baselineAligned="false">
 
             <GridLayout
+                android:id="@+id/grid_layout"
                 android:layout_width="match_parent"
-                android:layout_height="689dp"
+                android:layout_height="683dp"
                 android:layout_weight="8"
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
@@ -391,12 +394,10 @@
 
                 </androidx.cardview.widget.CardView>
 
-
             </GridLayout>
 
         </LinearLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>

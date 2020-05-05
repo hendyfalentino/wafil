@@ -7,9 +7,9 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wafil.R;
-import com.example.wafil.Wafil.LoginActivity;
 import com.example.wafil.Wafil.API.SessionManager;
-import com.example.wafil.Wafil.MainMenuActivity;
+import com.example.wafil.Wafil.LoginActivity;
+import com.example.wafil.Wafil.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 if (sessionManager.isLogIn()){
                     finish();
-                    startActivity(new Intent(MainActivity.this, MainMenuActivity.class));
+                    startActivity(new Intent(MainActivity.this, MenuActivity.class));
                 } else {
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);

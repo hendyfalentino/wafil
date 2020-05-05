@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             sessionManager.createSession(user_first_name, user_name, user_id);
 
-                            Intent intent = new Intent(LoginActivity.this, MainMenuActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                             intent.putExtra("user_name", user_name);
                             intent.putExtra("user_first_name", user_first_name);
                             intent.putExtra("user_id", user_id);

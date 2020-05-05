@@ -46,7 +46,7 @@ public class activity_chilyo_main extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.main_service_vendor_view);
 
-        /** Simulasi login - Hapus ini hen klo smo pake nni punya **/
+        /** Cleon, ganti dpe API yg tarek data di user. **/
         sessionManager = new SessionManager(this);
         sessionManager.checkLogIn();
         HashMap<String, String> user = sessionManager.getUserDetail();

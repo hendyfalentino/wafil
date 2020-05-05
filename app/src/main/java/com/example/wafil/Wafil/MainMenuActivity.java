@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wafil.R;
+import com.example.wafil.Wafil.API.SessionManager;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_main_menu);
         setContentView(R.layout.activity_main_menu);
 
         btn_wafil = findViewById(R.id.btn_wafil);

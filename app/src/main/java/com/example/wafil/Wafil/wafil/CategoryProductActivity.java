@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
-import com.example.wafil.Wafil.SessionManager;
+import com.example.wafil.Wafil.API.ApiClient;
+import com.example.wafil.Wafil.API.ApiInterface;
+import com.example.wafil.Wafil.API.SessionManager;
 
 import java.util.List;
 
@@ -43,7 +45,7 @@ public class CategoryProductActivity extends AppCompatActivity {
     }
 
     public void fetchCategoryProduct (String key){
-        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface.class);
         Call<List<Category_Product>> call = apiInterface.getCategoryProduct(key);
 
         call.enqueue(new Callback<List<Category_Product>>() {

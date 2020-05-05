@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Wafil.wafil.CategoryProductActivity"></activity>
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_main"></activity>
+        <activity android:name=".Wafil.wafil.CategoryProductActivity" />
         <activity android:name=".Wafil.MainMenuActivity" />
         <activity android:name=".Wafil.LogoutActivity" />
         <activity android:name=".Wafil.wafil.EditProfileActivity" />
@@ -36,6 +37,14 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key" />
         </activity>
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_makeup" />
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_payment" />
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_user" />
+        <activity android:name=".Wafil.chilyoHouse.Main2Activity" />
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_rating" />
+        <activity android:name=".Wafil.chilyoHouse.activity_chilyo_shopping_cart" />
+        <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.VendorProductDashboard" />
+        <activity android:name=".Wafil.chilyoHouse.MainServiceAndProduct.ProductDetail" />
     </application>
 
 </manifest>

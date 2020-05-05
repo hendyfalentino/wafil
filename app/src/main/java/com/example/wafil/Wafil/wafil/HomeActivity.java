@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
-import com.example.wafil.Wafil.SessionManager;
+import com.example.wafil.Wafil.API.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.HashMap;

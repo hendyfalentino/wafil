@@ -1,8 +1,13 @@
-package com.example.wafil.Wafil;
+package com.example.wafil.Wafil.API;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
+import com.example.wafil.Wafil.LoginActivity;
+import com.example.wafil.Wafil.LogoutActivity;
+import com.example.wafil.Wafil.MainMenuActivity;
 
 import java.util.HashMap;
 
@@ -60,5 +65,17 @@ public class SessionManager {
         ((LogoutActivity)context).finish();
 
     }
+    /*
+    public static void setAuthUserId(String user_auth,Context context){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("user_auth", user_auth);
+        editor.apply();
+    }
 
+    public static String getAuthUserId(Context context){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getString("user_auth", null);
+    }
+    */
 }

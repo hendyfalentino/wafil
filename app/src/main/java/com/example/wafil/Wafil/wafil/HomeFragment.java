@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
+import com.example.wafil.Wafil.API.ApiClient;
+import com.example.wafil.Wafil.API.ApiInterface;
 
 import java.util.List;
 
@@ -65,7 +67,7 @@ public class HomeFragment extends Fragment {
     }
 
     public void fetchProduct (String key){
-        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface.class);
         Call<List<Product>> call = apiInterface.getProduct(key);
 
         call.enqueue(new Callback<List<Product>>() {

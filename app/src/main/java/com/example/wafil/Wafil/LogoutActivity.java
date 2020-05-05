@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wafil.Wafil.API.SessionManager;
+
 public class LogoutActivity extends AppCompatActivity {
 
     SessionManager sessionManager;

@@ -13,7 +13,7 @@ public class Activity2 extends AppCompatActivity {
     private Button buttonRumah;
     private Button buttonKantor;
     private Button buttonPengemas;
-
+    //Comment by Keny Test Commit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

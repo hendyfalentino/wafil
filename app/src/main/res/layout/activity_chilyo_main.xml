@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".activity_chilyo_main">
+        tools:context="Wafil.chilyoHouze.activity_chilyo_main">
 
         <!-- top navigation -->
         <LinearLayout

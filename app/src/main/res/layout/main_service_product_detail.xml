@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -12,151 +13,191 @@
         android:layout_marginBottom="20dp">
 
         <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
-
-        <ImageView
-            android:id="@+id/main_service_product_dashboard_image"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="@color/black"
-            android:scaleType="centerCrop"
-            android:src="@drawable/logo_hair_styling"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="30dp">
-
-            <TextView
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:id="@+id/main_service_product_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintWidth_percent="0.5"
-                android:text="Nama Produk"
-                android:fontFamily="@font/productsansbold"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                />
-
-            <TextView
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:id="@+id/main_service_product_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="18.000 koin"
-                android:fontFamily="@font/productsansbold"
-                android:textColor="@color/black"
-                android:textSize="17sp"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginBottom="20dp">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
 
-            <TextView
-                android:textSize="15sp"
-                android:fontFamily="@font/productsansbold"
+            <ImageView
+                android:id="@+id/main_service_product_dashboard_image"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:background="@color/black"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_hair_styling"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="30dp">
+
+                <TextView
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/main_service_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintWidth_percent="0.5"
+                    android:text="Nama Produk"
+                    android:fontFamily="@font/productsansbold"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    />
+
+                <TextView
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/main_service_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18.000 koin"
+                    android:fontFamily="@font/productsansbold"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gray"
-                android:text="Deskripsi"/>
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp">
 
-            <TextView
-                android:id="@+id/main_service_product_desc"
-                android:layout_marginTop="5dp"
-                android:textSize="13sp"
-                android:fontFamily="@font/productsansbold"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:textSize="15sp"
+                    android:fontFamily="@font/productsansbold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:text="Deskripsi"/>
+
+                <TextView
+                    android:id="@+id/main_service_product_desc"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/productsansbold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Lorem ipsum dolor \nsit amet consecteur "/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:alpha="0.5"
+                android:background="@color/gray"/>
+
+            <!-- REVIEW PAYMENT -->
+            <LinearLayout
+                android:id="@+id/menu_payment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="3dp"
-                android:text="Lorem ipsum dolor \nsit amet consecteur "/>
+                android:orientation="vertical">
+
+                <!-- DATE BOOKING -->
+                <EditText
+                    android:id="@+id/edit_date"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Date"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="130dp"/>
+
+                <!-- PLACE -->
+                <Button
+                    android:id="@+id/place_btn_review"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select Place"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginEnd="130dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:alpha="0.5"
+                android:background="@color/gray"/>
+
+            <EditText
+                android:id="@+id/main_service_product_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="15dp"
+                android:hint="Tinggalkan catatan bagi vendor..."
+                android:fontFamily="@font/productsansregular"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/min_qty"
+                    app:layout_constraintRight_toLeftOf="@id/main_service_product_qty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_keyboard_arrow_down_24dp"
+                    android:background="@drawable/shape_rounded_outline_black"/>
+
+                <TextView
+                    android:id="@+id/main_service_product_qty"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/productsansbold"
+                    android:textColor="@color/black"
+                    android:text="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/add_qty"
+                    app:layout_constraintLeft_toRightOf="@id/main_service_product_qty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_keyboard_arrow_up_24dp"
+                    android:background="@drawable/shape_rounded_outline_black"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="7dp"
-            android:alpha="0.5"
-            android:background="@color/gray"/>
-
-        <EditText
-            android:id="@+id/main_service_product_note"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:paddingBottom="15dp"
-            android:hint="Tinggalkan catatan bagi vendor..."
-            android:fontFamily="@font/productsansregular"
-            android:inputType="text"
-            android:textSize="14sp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp">
-
-            <ImageView
-                android:id="@+id/min_qty"
-                app:layout_constraintRight_toLeftOf="@id/main_service_product_qty"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginRight="20dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_keyboard_arrow_down_black"
-                android:background="@drawable/shape_rounded_outline_black"/>
-
-            <TextView
-                android:id="@+id/main_service_product_qty"
-                android:textSize="26sp"
-                android:fontFamily="@font/productsansbold"
-                android:textColor="@color/black"
-                android:text="1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <ImageView
-                android:id="@+id/add_qty"
-                app:layout_constraintLeft_toRightOf="@id/main_service_product_qty"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginLeft="20dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/ic_keyboard_arrow_up_black"
-                android:background="@drawable/shape_rounded_outline_black"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
 
     </ScrollView>
 
@@ -168,7 +209,7 @@
         android:layout_height="50dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:background="@drawable/rounded_menu"
+        android:background="@android:color/holo_blue_light"
         android:fontFamily="@font/productsansbold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

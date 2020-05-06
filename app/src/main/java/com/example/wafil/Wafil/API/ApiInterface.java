@@ -1,5 +1,6 @@
 package com.example.wafil.Wafil.API;
 
+import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCartGroup;
 import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainDashboard;
@@ -63,5 +64,10 @@ public interface ApiInterface {
             @Field("shopcart_qty") int shopcart_qty,
             @Field("shopcart_price") int shopcart_price,
             @Field("shopcart_note") String shopcart_note
+    );
+
+    @GET("payment/checkPayment.php")
+    Call<List<PaymentItem>> getPaymentItem(
+            @Query("user") String user
     );
 }

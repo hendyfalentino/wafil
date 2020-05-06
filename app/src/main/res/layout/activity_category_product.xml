@@ -12,5 +12,6 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="10dp"
         tools:layout_editor_absoluteY="10dp"
+        tools:listitem="@layout/category_product"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

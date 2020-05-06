@@ -37,7 +37,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
         holder.name_category_product.setText(category_product.get(position).getName_category_product());
 
     }
-
+    //TEST
     @Override
     public int getItemCount() {
         return category_product.size();

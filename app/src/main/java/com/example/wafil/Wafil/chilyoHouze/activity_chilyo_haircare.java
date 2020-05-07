@@ -1,4 +1,4 @@
 package com.example.wafil.Wafil.chilyoHouze;
 
-public class activity_chilyo_order {
+public class activity_chilyo_haircare {
 }

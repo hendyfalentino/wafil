@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activity_chilyo_order"
+    tools:context=".Wafil.chilyoHouze.activity_chilyo_order"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -233,7 +233,7 @@
 
         <Button
             android:id="@+id/pay_book_now"
-            android:text="TRANSACTION COMPLETE"
+            android:text="COMPLETE"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:background="@android:color/holo_blue_light"

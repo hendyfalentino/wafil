@@ -48,10 +48,10 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
         holder.cardView.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent mIntent = new Intent(view.getContext(), Category_Product.class);
-                //mIntent.putExtra("Category", v.getName_category_product());
-                //view.getContext().startActivity(mIntent);
-                Toast.makeText(view.getContext(), "Can't Get Profile".toString(), Toast.LENGTH_SHORT).show();
+                Intent mIntent = new Intent(view.getContext(), ProductActivity.class);
+                mIntent.putExtra("Category", v.getName_category_product());
+                view.getContext().startActivity(mIntent);
+                Toast.makeText(view.getContext(), v.getName_category_product(), Toast.LENGTH_SHORT).show();
             }
         }));
     }
@@ -65,13 +65,13 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
         TextView name_category_product;
         RecyclerView category_product;
-        ImageView cardView;
+        CardView cardView;
 
         public MyViewHolder(View itemView){
             super(itemView);
             name_category_product = itemView.findViewById(R.id.name_category_product);
             //category_product = itemView.findViewById(R.id.category_product);
-            cardView = itemView.findViewById(R.id.imageView2);
+            cardView = itemView.findViewById(R.id.bs);
         }
     }
 }

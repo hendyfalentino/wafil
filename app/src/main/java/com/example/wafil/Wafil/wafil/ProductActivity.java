@@ -63,20 +63,7 @@ public class ProductActivity extends AppCompatActivity {
         fetchProduct("");
     }
 
-    public void kurang(View view){
-        minteger = minteger - 1;
-        display(minteger);
-    }
 
-    public void tambah(View view){
-        minteger = minteger + 1;
-        display(minteger);
-    }
-
-    private void display(int number){
-        TextView displayInteger = findViewById(R.id.angka);
-        displayInteger.setText("" + number);
-    }
 
     public void fetchProduct (String key){
         apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface.class);

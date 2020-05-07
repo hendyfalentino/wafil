@@ -54,6 +54,7 @@
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />
+        <activity android:name=".Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart" />
     </application>
 
 </manifest>

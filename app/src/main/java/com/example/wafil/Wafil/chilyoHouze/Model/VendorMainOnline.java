@@ -4,13 +4,13 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class VendorMainOnline {
-    @SerializedName("id_user")
+    @SerializedName("user_id")
     @Expose
-    private String id_user;
+    private String user_id;
 
-    @SerializedName("name_user")
+    @SerializedName("user_name")
     @Expose
-    private String name_user;
+    private String user_name;
 
     @SerializedName("pic_user")
     @Expose
@@ -20,20 +20,20 @@ public class VendorMainOnline {
     @Expose
     private String phone_num_user;
 
-    public String getId_user() {
-        return id_user;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public void setId_user(String id_user) {
-        this.id_user = id_user;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public String getName_user() {
-        return name_user;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setName_user(String name_user) {
-        this.name_user = name_user;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getPic_user() {

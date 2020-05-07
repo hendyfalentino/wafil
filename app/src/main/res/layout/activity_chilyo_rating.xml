@@ -98,8 +98,8 @@
                 android:layout_marginTop="25dp"
                 android:numStars="5"
                 android:progressBackgroundTint="#000000"
-                android:progressTint="#faaf1c"
-                android:rating="4"
+                android:progressTint="@android:color/holo_blue_bright"
+                android:rating="4.5"
                 android:stepSize="0.5" />
 
         </LinearLayout>
@@ -144,10 +144,11 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SELESAI"
-                android:textColor="#fff"
+                android:text="DONE"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
                 android:height="55dp"
-                android:background="@drawable/rounded_menu"
+                android:background="@android:color/holo_blue_bright"
                 android:fontFamily="@font/productsansbold"
                 android:layout_marginTop="20dp"/>
 

@@ -107,7 +107,7 @@
 
                 <!-- tombol make up -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_make_up_button"
+                    android:id="@+id/activity_chilyo_makeUp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -116,6 +116,7 @@
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/acitvity_chilyo_make_up_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/logo_make_up" />
@@ -134,15 +135,16 @@
 
                 <!-- tombol self nails -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_self_nail_button"
+                    android:id="@+id/acitvity_chilyo_self_nail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_make_up_button"
+                    app:layout_constraintLeft_toRightOf="@id/activity_chilyo_makeUp"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/acitvity_chilyo_self_nail_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/logo_self_nail" />
@@ -161,18 +163,19 @@
 
                 <!-- tombol spa -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_spa_button"
+                    android:id="@+id/acitvity_chilyo_spa"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_self_nail_button"
+                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_self_nail"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/acitvity_chilyo_spa_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
-                        android:src="@drawable/logo_pedicure" />
+                        android:src="@drawable/logo_spa" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -188,15 +191,16 @@
 
                 <!-- tombol hair care -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_hair_care_button"
+                    android:id="@+id/acitvity_chilyo_hair_care"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_spa_button"
+                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_spa"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/acitvity_chilyo_hair_care_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/logo_hair_care" />

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -42,11 +44,10 @@ public class activity_chilyo_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chilyo_main);
-        //getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.main_service_vendor_view);
 
-        /** Cleon, ganti dpe API yg tarek data di user. **/
+        /** Cleon, ganti dpe API yg tarek data di user
         sessionManager = new SessionManager(this);
         sessionManager.checkLogIn();
         HashMap<String, String> user = sessionManager.getUserDetail();
@@ -54,7 +55,7 @@ public class activity_chilyo_main extends AppCompatActivity {
         //SessionManager.setAuthUserId("2020001", getBaseContext());
         //String data = SessionManager.getAuthUserId(getBaseContext());
         String data = getUserId;
-        Log.d("GetData", data);
+        Log.d("GetData", data);**/
         elementInit();
         getJson();
     }
@@ -70,6 +71,14 @@ public class activity_chilyo_main extends AppCompatActivity {
         // inisialisasi progress bar
         progress = new CustomProgressBar();
 
+        ImageView activity_chilyo_back = findViewById(R.id.activity_chilyo_back);
+        activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         // pergi ke halaman shopping cart
         ImageView shopping_cart_button = findViewById(R.id.activity_chilyo_cart);
         shopping_cart_button.setOnClickListener(new View.OnClickListener() {
@@ -80,15 +89,58 @@ public class activity_chilyo_main extends AppCompatActivity {
             }
         });
 
-        // go to rating
-        ImageView rating_button = findViewById(R.id.activity_chilyo_history);
-        rating_button.setOnClickListener(new View.OnClickListener() {
+        // go to history
+        ImageView history_button = findViewById(R.id.activity_chilyo_history);
+        history_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_rating.class);
+                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_history.class);
                 startActivity(intentSettings);
             }
         });
+
+        // go to Make Up
+        LinearLayout acitvity_chilyo_make_up_button = findViewById(R.id.activity_chilyo_makeUp);
+        acitvity_chilyo_make_up_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_makeup.class);
+                startActivities(intentSettings);
+            }
+        });
+
+        // go to Self Nail
+        ImageView acitvity_chilyo_self_nail_button = findViewById(R.id.acitvity_chilyo_self_nail_button);
+        acitvity_chilyo_self_nail_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_selfnail.class);
+                startActivities(intentSettings);
+            }
+        });
+
+        // go to Spa
+        ImageView acitvity_chilyo_spa_button = findViewById(R.id.acitvity_chilyo_spa_button);
+        acitvity_chilyo_spa_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_spa.class);
+                startActivities(intentSettings);
+            }
+        });
+
+        // go to HairCare
+        ImageView acitvity_chilyo_hair_care_button = findViewById(R.id.acitvity_chilyo_hair_care_button);
+        acitvity_chilyo_hair_care_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentSettings = new Intent(activity_chilyo_main.this, activity_chilyo_haircare.class);
+                startActivities(intentSettings);
+            }
+        });
+    }
+
+    private void startActivities(Intent intentSettings) {
     }
     /*Method to generate List of data using RecyclerView with custom adapter*/
 
@@ -100,7 +152,6 @@ public class activity_chilyo_main extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<VendorMainOnline>> call, Response<List<VendorMainOnline>> response) {
                 generateDataList(response.body());
-                //progress.getDialog().dismiss();
             }
 
             @Override
@@ -111,7 +162,7 @@ public class activity_chilyo_main extends AppCompatActivity {
     }
 
     private void generateDataList(List<VendorMainOnline> vendorMainOnline) {
-        adapter = new MainServiceVendorOnlineAdapter(this, vendorMainOnline);
+        adapter = new MainServiceVendorOnlineAdapter(this, this, vendorMainOnline);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(activity_chilyo_main.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);

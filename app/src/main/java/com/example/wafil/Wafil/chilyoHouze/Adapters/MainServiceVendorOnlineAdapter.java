@@ -1,7 +1,9 @@
 package com.example.wafil.Wafil.chilyoHouze.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +25,11 @@ public class MainServiceVendorOnlineAdapter extends RecyclerView.Adapter<MainSer
 
     private List<VendorMainOnline> dataList;
     private Context context;
+    private Activity activity;
 
-    public MainServiceVendorOnlineAdapter(Context context, List<VendorMainOnline> dataList){
+    public MainServiceVendorOnlineAdapter(Context context, Activity activity, List<VendorMainOnline> dataList){
         this.context = context;
+        this.activity = activity;
         this.dataList = dataList;
     }
 
@@ -40,18 +44,25 @@ public class MainServiceVendorOnlineAdapter extends RecyclerView.Adapter<MainSer
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         final VendorMainOnline v = dataList.get(position);
-        holder.main_service_vendor_online_item_title.setText(v.getName_user());
+        holder.main_service_vendor_online_item_title.setText(v.getUser_name());
         holder.main_service_vendor_online_item_phone_num.setText(v.getPhone_num_user());
+
         holder.main_service_vendor_online_item_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), VendorProductDashboard.class);
-                mIntent.putExtra("vendor_id", v.getId_user());
-                view.getContext().startActivity(mIntent);
+                mIntent.putExtra("vendor_id", v.getUser_id());
+                try{
+                    view.getContext().startActivity(mIntent);
+                }
+                catch (Exception e){
+                    Log.d("activity", e.toString());
+                }
+
             }
         });
 
-        String imageurl =  v.getPic_user();
+        String imageurl = v.getPic_user();
         Picasso.with(context).load(imageurl).into(holder.main_service_vendor_online_item_image);
     }
 

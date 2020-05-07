@@ -42,7 +42,7 @@
             android:textSize="13sp"
             android:textColor="#666666"
             android:layout_marginRight="10dp"
-            android:text=" Isi Ulang"/>
+            android:text=" Isi Ulang : "/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
             android:textSize="13sp"
             android:textColor="#666666"
             android:layout_marginRight="10dp"
-            android:text=" Galon     "/>
+            android:text=" Galon      : "/>
 
         <TextView
             android:layout_width="wrap_content"

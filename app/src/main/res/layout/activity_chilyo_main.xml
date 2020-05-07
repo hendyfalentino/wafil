@@ -172,7 +172,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
-                        android:src="@drawable/logo_pedicure" />
+                        android:src="@drawable/logo_spa" />
 
                     <TextView
                         android:layout_width="match_parent"

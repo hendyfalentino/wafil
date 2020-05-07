@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wafil.R;
@@ -30,6 +31,7 @@ public class ProductActivity extends AppCompatActivity {
     private Adapter adapter;
     private ApiInterface apiInterface;
     ProgressBar progressBar;
+    int minteger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,21 @@ public class ProductActivity extends AppCompatActivity {
             }
         });
         fetchProduct("");
+    }
+
+    public void kurang(View view){
+        minteger = minteger - 1;
+        display(minteger);
+    }
+
+    public void tambah(View view){
+        minteger = minteger + 1;
+        display(minteger);
+    }
+
+    private void display(int number){
+        TextView displayInteger = findViewById(R.id.angka);
+        displayInteger.setText("" + number);
     }
 
     public void fetchProduct (String key){

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
+import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 
@@ -17,10 +18,10 @@ import java.util.List;
 
 public class OrderGetItemAdapter extends RecyclerView.Adapter<OrderGetItemAdapter.ViewHolder> {
 
-    private List<PaymentItem> dataList;
+    private List<OrderItem> dataList;
     private Context context;
 
-    public OrderGetItemAdapter(Context context, List<PaymentItem> dataList){
+    public OrderGetItemAdapter(Context context, List<OrderItem> dataList){
         this.context = context;
         this.dataList = dataList;
     }
@@ -35,10 +36,10 @@ public class OrderGetItemAdapter extends RecyclerView.Adapter<OrderGetItemAdapte
 
     @Override
     public void onBindViewHolder(@NonNull OrderGetItemAdapter.ViewHolder holder, int position) {
-        final PaymentItem v = dataList.get(position);
+        final OrderItem v = dataList.get(position);
         holder.order_qty.setText(v.getProduct_qty()+" x");
         holder.order_name.setText(v.getProduct_name());
-        holder.order_price.setText(Support.rupiahFormat(v.getProduct_price())+" coin");
+        holder.order_price.setText(Support.rupiahFormat(v.getProduct_price())+" K");
     }
 
     @Override

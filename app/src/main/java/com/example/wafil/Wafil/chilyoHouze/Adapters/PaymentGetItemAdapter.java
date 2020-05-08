@@ -38,7 +38,7 @@ public class PaymentGetItemAdapter extends RecyclerView.Adapter<PaymentGetItemAd
         final PaymentItem v = dataList.get(position);
         holder.order_qty.setText(v.getProduct_qty()+" x");
         holder.order_name.setText(v.getProduct_name());
-        holder.order_price.setText(Support.rupiahFormat(v.getProduct_price())+" coin");
+        holder.order_price.setText(Support.rupiahFormat(v.getProduct_price())+" K");
     }
 
     @Override

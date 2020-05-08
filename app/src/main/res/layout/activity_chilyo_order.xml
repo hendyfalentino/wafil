@@ -194,7 +194,7 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_paymentItem"
+                android:id="@+id/rv_orderItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/payment_item"/>
@@ -232,7 +232,7 @@
 
         <Button
             android:id="@+id/complete_button"
-            android:text="COMPLETE"
+            android:text="SELESAI"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:background="@android:color/holo_blue_light"
@@ -244,4 +244,5 @@
             android:layout_marginBottom="30dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout >
+
 </ScrollView>

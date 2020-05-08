@@ -45,13 +45,4 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:src="@drawable/ic_remove_shopping_cart"
-        android:id="@+id/shopping_item_remove"
-        android:layout_marginTop="5dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="30dp"
-        android:layout_height="30dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

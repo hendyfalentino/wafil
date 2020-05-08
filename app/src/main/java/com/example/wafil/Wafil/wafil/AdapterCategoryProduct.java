@@ -42,6 +42,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
     @Override
     public void onBindViewHolder(@NonNull AdapterCategoryProduct.MyViewHolder holder, int position) {
         holder.name_category_product.setText(category_product.get(position).getName_category_product());
+        holder.pricen.setText(category_product.get(position).getPrice());
         //holder.category_product.setAdapter(itemAdapter);
 
         final Category_Product v = category_product.get(position);
@@ -63,14 +64,14 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
     public static class MyViewHolder extends  RecyclerView.ViewHolder{
 
-        TextView name_category_product;
-        RecyclerView category_product;
+        TextView name_category_product, pricen, pricex;
         CardView cardView;
 
         public MyViewHolder(View itemView){
             super(itemView);
             name_category_product = itemView.findViewById(R.id.name_category_product);
-            //category_product = itemView.findViewById(R.id.category_product);
+            pricen = itemView.findViewById(R.id.pricen);
+            pricex = itemView.findViewById(R.id.pricex);
             cardView = itemView.findViewById(R.id.bs);
         }
     }

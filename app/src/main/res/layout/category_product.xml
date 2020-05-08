@@ -45,6 +45,7 @@
             android:text=" Isi Ulang : "/>
 
         <TextView
+            android:id="@+id/pricen"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:textSize="13sp"
@@ -53,6 +54,7 @@
             android:layout_marginRight="10dp"/>
 
         <TextView
+            android:id="@+id/pricex"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:text="Max"/>

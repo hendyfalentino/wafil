@@ -71,7 +71,7 @@ public class activity_chilyo_main extends AppCompatActivity {
         // inisialisasi progress bar
         progress = new CustomProgressBar();
 
-        ImageView activity_chilyo_back = findViewById(R.id.activity_chilyo_back);
+        ImageView activity_chilyo_back = findViewById(R.id.backButton);
         activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

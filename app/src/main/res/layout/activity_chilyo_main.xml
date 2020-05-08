@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/chilyo_houze">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#FFFFFF"
             android:elevation="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,13 +29,14 @@
                 android:layout_marginBottom="20dp">
 
                 <ImageView
-                    android:id="@+id/activity_chilyo_back"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:id="@+id/backButton"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/round"
+                    android:padding="10dp"
                     android:src="@drawable/ic_arrow_thin_left"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    />
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <ImageView
                     android:id="@+id/activity_chilyo_history"

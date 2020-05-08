@@ -20,6 +20,7 @@ import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
 
 import java.util.List;
@@ -110,7 +111,7 @@ public class ActivityPayment extends AppCompatActivity {
                 }
 
                 String total_ = Integer.toString(total);
-                order_amount.setText(Support.rupiahFormat(total_) + " coin");
+                order_amount.setText(Support.rupiahFormat(total_) + " K");
 
                 Log.d("GetData", total_);
                 generateDataList(response.body());

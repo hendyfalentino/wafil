@@ -22,6 +22,7 @@ import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,7 +40,6 @@ public class VendorProductDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_service_vendor_product_dashboard);
-        getSupportActionBar().hide();
 
         Intent intent = getIntent();
         String vendor_id = intent.getStringExtra("vendor_id");
@@ -55,7 +55,7 @@ public class VendorProductDashboard extends AppCompatActivity {
                 finish();
             }
         });
-
+        Log.d("dataFlow", vendor_id);
         getJson(vendor_id);
     }
 

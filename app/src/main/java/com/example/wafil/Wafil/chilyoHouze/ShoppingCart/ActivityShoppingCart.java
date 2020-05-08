@@ -38,11 +38,11 @@ public class ActivityShoppingCart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_cart);
-        getSupportActionBar().hide();
 
         elementInit();
 
         /** menngambil id user **/
+        sessionManager = new SessionManager(this);
         HashMap<String, String> user = sessionManager.getUserDetail();
         //id_user = SessionManager.getAuthUserId(getBaseContext());
         id_user = user.get(SessionManager.user_id);

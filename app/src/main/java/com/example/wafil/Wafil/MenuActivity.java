@@ -1,5 +1,6 @@
 package com.example.wafil.Wafil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.SessionManager;
+import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.wafil.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -53,6 +55,9 @@ public class MenuActivity extends AppCompatActivity {
                         case R.id.nav_home:
                             selectedFragment = new MainMenuActivity();
                             break;
+                        case R.id.nav_shopping_cart:
+                            Intent data = new Intent(MenuActivity.this, ActivityShoppingCart.class);
+                            startActivity(data);
                         case R.id.nav_setting:
                             selectedFragment = new SettingFragment();
                             selectedFragment.setArguments(bundle);

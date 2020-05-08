@@ -6,6 +6,10 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Home"/>
     <item
+        android:id="@+id/nav_shopping_cart"
+        android:icon="@drawable/ic_shopping_bag"
+        android:title="Shopping Cart"/>
+    <item
         android:id="@+id/nav_setting"
         android:icon="@drawable/ic_settings_black_24dp"
         android:title="Setting"/>

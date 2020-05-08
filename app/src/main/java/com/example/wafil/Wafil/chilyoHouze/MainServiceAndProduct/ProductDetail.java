@@ -46,7 +46,6 @@ public class ProductDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_service_product_detail);
-        getSupportActionBar().hide();
 
         /** mengambil product_id dari activity sebelumnya **/
         Intent intent = getIntent();
@@ -57,7 +56,7 @@ public class ProductDetail extends AppCompatActivity {
         buttonListener();
 
         /** mengambil data dari API **/
-
+        sessionManager = new SessionManager(this);
         HashMap<String, String> user = sessionManager.getUserDetail();
         id_user = user.get(SessionManager.user_id);
         getJson(product_id, id_user);

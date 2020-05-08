@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class ShoppingCartGroup {
+
     @SerializedName("vendor_id")
     @Expose
     private String vendor_id;

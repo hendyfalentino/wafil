@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText user_name, user_password;
     private Button btn_login;
     SessionManager sessionManager;
-	//Test Commit Bragi
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

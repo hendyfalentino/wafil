@@ -14,24 +14,35 @@ import androidx.fragment.app.Fragment;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.atorJo.Activity2;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
+import com.example.wafil.Wafil.print.MapActivity;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
 
-    Button btn_wafil, btn_chilyo, button;
+    Button btn_wafil, btn_print, btn_chilyo, button;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_main_menu, container, false);
+
         btn_wafil = v.findViewById(R.id.btn_wafil);
+        btn_print = v.findViewById(R.id.btn_print);
         btn_chilyo = v.findViewById(R.id.btn_chilyo);
         button = v.findViewById(R.id.button);
+
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ServiceTypeActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_print.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MapActivity.class);
                 startActivity(intent);
             }
         });

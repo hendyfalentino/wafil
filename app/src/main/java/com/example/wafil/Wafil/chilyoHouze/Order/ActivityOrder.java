@@ -22,6 +22,7 @@ import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_rating;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
@@ -58,7 +59,7 @@ public class ActivityOrder extends AppCompatActivity {
         activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityOrder.this, ActivityShoppingCart.class);
+                intentSettings = new Intent(ActivityOrder.this, activity_chilyo_main.class);
                 startActivity(intentSettings);
             }
         });

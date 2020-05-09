@@ -1,5 +1,6 @@
 package com.example.wafil.Wafil.chilyoHouze;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +12,10 @@ import com.example.wafil.R;
 
 public class activity_chilyo_rating extends AppCompatActivity {
 
-    private RatingBar ratingBar;
+    RatingBar ratingBar;
     /* private TextView result; */
-    private Button button;
+    Button button;
+    Intent intentSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,7 @@ public class activity_chilyo_rating extends AppCompatActivity {
         setContentView(R.layout.activity_chilyo_rating);
 
         ratingBar = findViewById(R.id.ratingBar_id);
-        button = (Button)findViewById(R.id.button);
+        button = findViewById(R.id.button);
 
         /*
         result.setText("Rating : "+ratingBar.getRating());
@@ -32,11 +34,16 @@ public class activity_chilyo_rating extends AppCompatActivity {
             }
         });*/
 
+        button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                intentSetting = new Intent(activity_chilyo_rating.this, activity_chilyo_main.class);
+                startActivities(intentSetting);
             }
         });
+    }
+
+    private void startActivities(Intent intentSetting) {
     }
 }

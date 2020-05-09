@@ -18,6 +18,7 @@ import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SharedPreferencesStore;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
+import com.example.wafil.Wafil.chilyoHouze.Order.ActivityOrder;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
@@ -62,12 +63,12 @@ public class ActivityPayment extends AppCompatActivity {
             }
         });
 
-        /** tombol Book now **/
+        /** tombol Bayar **/
         Button pay_book_now = findViewById(R.id.pay_book_now);
         pay_book_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityPayment.this, activity_chilyo_order.class);
+                intentSettings = new Intent(ActivityPayment.this, ActivityOrder.class);
                 startActivity(intentSettings);
             }
         });

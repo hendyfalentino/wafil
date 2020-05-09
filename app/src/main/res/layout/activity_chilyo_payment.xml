@@ -19,8 +19,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="20dp"
-                    >
+                    android:paddingBottom="20dp">
 
                         <!-- TOP BORDER -->
                         <LinearLayout
@@ -92,11 +91,17 @@
 
                         </LinearLayout>
 
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_paymentItem"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            tools:listitem="@layout/payment_item"/>
+                            android:layout_height="wrap_content">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_paymentItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:listitem="@layout/payment_item"/>
+
+                        </LinearLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"

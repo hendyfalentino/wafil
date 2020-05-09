@@ -144,7 +144,7 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DONE"
+                android:text="KIRIM"
                 android:textSize="15sp"
                 android:textColor="@android:color/white"
                 android:height="55dp"

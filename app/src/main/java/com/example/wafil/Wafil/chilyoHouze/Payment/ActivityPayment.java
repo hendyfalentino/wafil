@@ -16,7 +16,6 @@ import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
-import com.example.wafil.Wafil.API.SharedPreferencesStore;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Order.ActivityOrder;

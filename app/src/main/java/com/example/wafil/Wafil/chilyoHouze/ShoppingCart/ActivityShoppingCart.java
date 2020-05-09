@@ -49,35 +49,14 @@ public class ActivityShoppingCart extends AppCompatActivity {
         setContentView(R.layout.shopping_cart);
 
         elementInit();
-        createExampleList();
-        buildRecycleView();
-
-        shopping_item_remove = findViewById(R.id.shopping_item_remove);
-
-        shopping_item_remove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = Integer.parseInt(product_name.getText().toString());
-                removeItem(position);
-            }
-        });
 
         /** menngambil id user **/
         sessionManager = new SessionManager(this);
         HashMap<String, String> user = sessionManager.getUserDetail();
-        //id_user = SessionManager.getAuthUserId(getBaseContext());
         id_user = user.get(SessionManager.user_id);
         layoutManager = new LinearLayoutManager(ActivityShoppingCart.this);
         rv_shopping_cart_group = findViewById(R.id.shopping_cart_group);
         getJson(id_user);
-    }
-
-    /** public void removeItem(int position) {
-        rv_shopping_cart_group.remove(position);
-        groupAdapter.notifyItemRemoved(position);
-    } **/
-
-    private void createExampleList() {
     }
 
     private void elementInit(){
@@ -101,19 +80,6 @@ public class ActivityShoppingCart extends AppCompatActivity {
             }
         });
 
-        /** hapus item **/
-        shopping_item_remove = findViewById(R.id.shopping_item_remove);
-        shopping_item_remove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = Integer.parseInt(product_name.getText().toString());
-                removeItem(position);
-            }
-        });
-
-    }
-
-    private void removeItem(int position) {
     }
 
     private void getJson(String id_user){
@@ -134,27 +100,14 @@ public class ActivityShoppingCart extends AppCompatActivity {
 
     private void generateShoppingGroup(List<ShoppingCartGroup> shoppingCartGroups) {
         groupAdapter = new ShoppingCartGroupAdapter(this, shoppingCartGroups);
+        groupAdapter.setClickGroupListener(new ShoppingCartGroupAdapter.deleteGroupClickListener() {
+            @Override
+            public void onDeleteClick(String id) {
+
+            }
+        });
         rv_shopping_cart_group.setLayoutManager(layoutManager);
         rv_shopping_cart_group.setAdapter(groupAdapter);
     }
-
-    public static void refreshData(){
-    }
-
-    public void buildRecycleView(){
-        rv_shopping_cart_group = findViewById(R.id.rv_shopping_cart_item);
-        rv_shopping_cart_group.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-
-        /** groupAdapter.setOnItemClickListener(new ShoppingCartGroup(){
-            @Override
-            public void onItemClick(int position){
-                changeItem(position, "Clicked");
-            }
-
-
-        }); **/
-    }
-
 
 }

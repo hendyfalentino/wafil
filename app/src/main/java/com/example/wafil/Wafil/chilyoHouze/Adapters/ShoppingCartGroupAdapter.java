@@ -19,14 +19,19 @@ import java.util.List;
 
 public class ShoppingCartGroupAdapter extends RecyclerView.Adapter<ShoppingCartGroupAdapter.ViewHolder> {
 
-    RecyclerView.LayoutManager layoutManager;
-    ShoppingCartItemAdapter itemAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ShoppingCartItemAdapter itemAdapter;
     private List<ShoppingCartGroup> dataList;
     private Context context;
+    private deleteGroupClickListener clickGroupListener;
 
     public ShoppingCartGroupAdapter(Context context, List<ShoppingCartGroup> dataList){
         this.context = context;
         this.dataList = dataList;
+    }
+
+    public void setClickGroupListener(deleteGroupClickListener clickGroupListener) {
+        this.clickGroupListener = clickGroupListener;
     }
 
     @NonNull
@@ -45,6 +50,14 @@ public class ShoppingCartGroupAdapter extends RecyclerView.Adapter<ShoppingCartG
         // recycler view
         layoutManager = new LinearLayoutManager(context);
         itemAdapter = new ShoppingCartItemAdapter(context, v.getVendor_products());
+
+        itemAdapter.SetClickListener(new ShoppingCartItemAdapter.deleteClickListener() {
+            @Override
+            public void onDeleteClick(String id) {
+                clickGroupListener.onDeleteClick(id);
+            }
+        });
+
         holder.vendor_products.setLayoutManager(layoutManager);
         holder.vendor_products.setAdapter(itemAdapter);
 
@@ -72,6 +85,10 @@ public class ShoppingCartGroupAdapter extends RecyclerView.Adapter<ShoppingCartG
             vendor_name = itemView.findViewById(R.id.vendor_name);
             vendor_products = itemView.findViewById(R.id.rv_shopping_cart_item);
         }
+    }
+
+    public interface deleteGroupClickListener{
+        void onDeleteClick (String id);
     }
 
 }

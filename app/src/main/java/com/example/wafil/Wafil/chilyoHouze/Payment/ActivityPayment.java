@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
+import com.example.wafil.Wafil.API.SessionManager;
 import com.example.wafil.Wafil.API.SharedPreferencesStore;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
@@ -24,6 +25,7 @@ import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -40,11 +42,17 @@ public class ActivityPayment extends AppCompatActivity {
     ImageView activity_chilyo_back;
     ImageView topUp_pay;
     TextView topUp_txt;
+    SessionManager sessionManager;
+    String getUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chilyo_payment);
+
+        sessionManager = new SessionManager(this);
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        getUserId = user.get(SessionManager.user_id);
 
         rv_paymentItem = findViewById(R.id.rv_paymentItem);
         order_amount = findViewById(R.id.order_amount);
@@ -98,7 +106,7 @@ public class ActivityPayment extends AppCompatActivity {
 
     private void getJson(){
         ApiInterface service = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<List<PaymentItem>> call = service.getPaymentItem(SharedPreferencesStore.getAuthUserId(getBaseContext()));
+        Call<List<PaymentItem>> call = service.getPaymentItem(getUserId);
         call.enqueue(new Callback<List<PaymentItem>>() {
             @Override
             public void onResponse(Call<List<PaymentItem>> call, Response<List<PaymentItem>> response) {
@@ -108,7 +116,10 @@ public class ActivityPayment extends AppCompatActivity {
                 int total = 0;
 
                 for(i = 0; i < size; i++){
-                    total += Integer.parseInt(data.get(i).getProduct_price());
+                    int qty = Integer.parseInt(data.get(i).getProduct_qty());
+                    int price = Integer.parseInt(data.get(i).getProduct_price());
+                    int qty_price = price * qty;
+                    total += qty_price;
                 }
 
                 String total_ = Integer.toString(total);
@@ -116,7 +127,6 @@ public class ActivityPayment extends AppCompatActivity {
 
                 Log.d("GetData", total_);
                 generateDataList(response.body());
-                //progress.getDialog().dismiss();
             }
             @Override
             public void onFailure(Call<List<PaymentItem>> call, Throwable t) {

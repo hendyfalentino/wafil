@@ -25,19 +25,16 @@ public class ShoppingCartItemAdapter extends RecyclerView.Adapter<ShoppingCartIt
 
     private List<VendorProduct> dataList;
     private Context context;
-    private OnItemClickListener click_listener;
+    private deleteClickListener click_listener;
 
     public ShoppingCartItemAdapter(Context context, List<VendorProduct> dataList){
         this.context = context;
         this.dataList = dataList;
     }
 
-    public interface OnItemClickListener{
-        void onItemClick (int position);
-        void onDeleteClick (int position);
+    public void SetClickListener(deleteClickListener listener){
+        this.click_listener = listener;
     }
-
-    public void setOnItemClickListener(OnItemClickListener listener){click_listener = listener; }
 
     @NonNull
     @Override
@@ -73,6 +70,15 @@ public class ShoppingCartItemAdapter extends RecyclerView.Adapter<ShoppingCartIt
                 view.getContext().startActivity(mIntent);
             }
         });
+
+        // hapus item dari cart
+        holder.shopping_item_remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                click_listener.onDeleteClick(v.getProduct_id());
+            }
+        });
+
     }
 
     @Override
@@ -84,42 +90,18 @@ public class ShoppingCartItemAdapter extends RecyclerView.Adapter<ShoppingCartIt
         TextView product_name, product_price;
         ImageView shopping_item_remove, shopping_item_image;
         ConstraintLayout shopping_item_container;
-
-        public ViewHolder(@NonNull View itemView, final OnItemClickListener listener){
+        public ViewHolder(@NonNull View itemView){
             super(itemView);
             product_name = itemView.findViewById(R.id.product_name);
             product_price = itemView.findViewById(R.id.product_price);
             shopping_item_remove = itemView.findViewById(R.id.shopping_item_remove);
             shopping_item_image = itemView.findViewById(R.id.shopping_item_image);
             shopping_item_container = itemView.findViewById(R.id.shopping_item_container);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null){
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });
-
-            shopping_item_remove.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null){
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION){
-                            listener.onDeleteClick(position);
-                        }
-                    }
-                }
-            });
-        }
-
-        public ViewHolder(View itemView) {
-            super(itemView);
         }
     }
+
+    public interface deleteClickListener{
+        void onDeleteClick (String id);
+    }
+
 }

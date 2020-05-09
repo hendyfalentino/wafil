@@ -62,6 +62,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
         String img = "http://carexports.uk/Admin/assets/img/" + test + ".png";
         Picasso.with(context).load(img).into(holder.imageView2);
     }
+
     //TEST
     @Override
     public int getItemCount() {

@@ -18,7 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            android:background="#666666"/>
+            android:background="#666666"
+            android:src="@drawable/aqua"/>
         
         <TextView
             android:id="@+id/name_category_product"

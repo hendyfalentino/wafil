@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,14 +45,13 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
         holder.pricex.setText(category_product.get(position).getPricex());
         holder.nprice.setText(category_product.get(position).getNprice());
         holder.xprice.setText(category_product.get(position).getXprice());
-        //holder.category_product.setAdapter(itemAdapter);
 
         final Category_Product v = category_product.get(position);
         holder.cardView.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), ProductActivity.class);
-                mIntent.putExtra("Category", v.getName_category_product());
+                mIntent.putExtra("name_category_product", v.getName_category_product());
                 view.getContext().startActivity(mIntent);
                 Toast.makeText(view.getContext(), v.getName_category_product(), Toast.LENGTH_SHORT).show();
             }
@@ -69,15 +67,18 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
         TextView name_category_product, pricen, pricex, nprice, xprice;
         CardView cardView;
+        ImageView imageView2;
 
         public MyViewHolder(View itemView){
             super(itemView);
+
             name_category_product = itemView.findViewById(R.id.name_category_product);
             pricen = itemView.findViewById(R.id.pricen);
             pricex = itemView.findViewById(R.id.pricex);
             nprice = itemView.findViewById(R.id.nprice);
             xprice = itemView.findViewById(R.id.xprice);
             cardView = itemView.findViewById(R.id.bs);
+            imageView2 = itemView.findViewById(R.id.imageView2);
         }
     }
 }

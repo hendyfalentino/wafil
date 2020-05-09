@@ -39,7 +39,7 @@ public class ProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
 
         Intent intent = getIntent();
-        String name_category_product = intent.getStringExtra("name_category_product");
+        final String name_category_product = intent.getStringExtra("name_category_product");
         progressBar = findViewById(R.id.progress);
         recyclerView = findViewById(R.id.recycler);
         layoutManager = new LinearLayoutManager(this);
@@ -53,11 +53,13 @@ public class ProductActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                fetchProduct(name_category_product, query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                fetchProduct(name_category_product, newText);
                 return false;
             }
         });

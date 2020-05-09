@@ -2,6 +2,7 @@ package com.example.wafil.Wafil.wafil;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -56,6 +58,9 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
                 Toast.makeText(view.getContext(), v.getName_category_product(), Toast.LENGTH_SHORT).show();
             }
         }));
+        String test = category_product.get(position).getName_category_product();
+        String img = "http://carexports.uk/Admin/assets/img/" + test + ".png";
+        Picasso.with(context).load(img).into(holder.imageView2);
     }
     //TEST
     @Override

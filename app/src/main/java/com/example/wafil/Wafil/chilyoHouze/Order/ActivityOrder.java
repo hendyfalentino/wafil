@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
-import com.example.wafil.Wafil.API.SharedPreferencesStore;
+import com.example.wafil.Wafil.API.SessionManager;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.OrderGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
 import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
@@ -27,6 +27,7 @@ import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_rating;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,12 +40,18 @@ public class ActivityOrder extends AppCompatActivity {
     OrderGetItemAdapter adapterOrder;
     TextView order_amount;
     Intent intentSettings;
-
+    SessionManager sessionManager;
+    String getUserId;
     ImageView activity_chilyo_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sessionManager = new SessionManager(this);
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        getUserId = user.get(SessionManager.user_id);
+
         setContentView(R.layout.activity_chilyo_order);
 
         rv_orderItem = findViewById(R.id.rv_orderItem);
@@ -80,7 +87,7 @@ public class ActivityOrder extends AppCompatActivity {
 
     private void getJson(){
         ApiInterface service = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<List<OrderItem>> call = service.getOrderItem(SharedPreferencesStore.getAuthUserId(getBaseContext()));
+        Call<List<OrderItem>> call = service.getOrderItem(getUserId);
         call.enqueue(new Callback<List<OrderItem>>() {
             @Override
             public void onResponse(Call<List<OrderItem>> call, Response<List<OrderItem>> response) {

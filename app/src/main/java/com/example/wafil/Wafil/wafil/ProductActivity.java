@@ -1,9 +1,5 @@
 package com.example.wafil.Wafil.wafil;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
@@ -54,23 +53,22 @@ public class ProductActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                fetchProduct(query);
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String newText) {
-                fetchProduct(newText);
                 return false;
             }
         });
-        fetchProduct("");
+        fetchProduct(name_category_product,"");
     }
 
 
 
-    public void fetchProduct (String key){
+    public void fetchProduct (String name_category_product, String key){
         apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<List<Product>> call = apiInterface.getProduct(key);
+        Call<List<Product>> call = apiInterface.getProduct(name_category_product, key);
 
         call.enqueue(new Callback<List<Product>>() {
             @Override

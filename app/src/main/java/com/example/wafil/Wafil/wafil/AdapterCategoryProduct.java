@@ -2,12 +2,9 @@ package com.example.wafil.Wafil.wafil;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +44,6 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
         holder.pricex.setText(category_product.get(position).getPricex());
         holder.nprice.setText(category_product.get(position).getNprice());
         holder.xprice.setText(category_product.get(position).getXprice());
-        //holder.category_product.setAdapter(itemAdapter);
 
         final Category_Product v = category_product.get(position);
         holder.cardView.setOnClickListener((new View.OnClickListener() {
@@ -73,6 +69,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
         public MyViewHolder(View itemView){
             super(itemView);
+
             name_category_product = itemView.findViewById(R.id.name_category_product);
             pricen = itemView.findViewById(R.id.pricen);
             pricex = itemView.findViewById(R.id.pricex);

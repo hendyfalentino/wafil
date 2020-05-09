@@ -16,6 +16,7 @@ import com.example.wafil.Wafil.atorJo.Activity2;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
 import com.example.wafil.Wafil.print.MapActivity;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
+import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
 
@@ -34,7 +35,7 @@ public class MainMenuActivity extends Fragment {
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), CategoryProductActivity.class);
+                Intent intent = new Intent(getActivity(), ServiceTypeActivity.class);
                 startActivity(intent);
             }
         });

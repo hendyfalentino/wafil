@@ -18,7 +18,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U"/>
 
-        <activity android:name=".Wafil.wafil.ProductActivity"/>
+        <activity android:name=".Wafil.wafil.ServiceTypeActivity"></activity>
+        <activity android:name=".Wafil.wafil.ProductActivity" />
         <activity android:name=".Wafil.MenuActivity" />
         <activity
             android:name=".Wafil.atorJo.Activity2"
@@ -50,13 +51,13 @@
                 android:value="@string/google_maps_key" />
         </activity>
         <activity android:name=".Wafil.chilyoHouze.activity_chilyo_makeup" />
-        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_haircare"/>
-        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_history"/>
-        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_selfnail"/>
-        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_spa"/>
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_haircare" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_history" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_selfnail" />
+        <activity android:name=".Wafil.chilyoHouze.activity_chilyo_spa" />
         <activity android:name=".Wafil.chilyoHouze.activity_chilyo_payment" />
-        <activity android:name=".Wafil.chilyoHouze.Order.ActivityOrder"/>
-        <activity android:name=".Wafil.chilyoHouze.Payment.ActivityPayment"/>
+        <activity android:name=".Wafil.chilyoHouze.Order.ActivityOrder" />
+        <activity android:name=".Wafil.chilyoHouze.Payment.ActivityPayment" />
         <activity android:name=".Wafil.chilyoHouze.Main2Activity" />
         <activity android:name=".Wafil.chilyoHouze.activity_chilyo_rating" />
         <activity android:name=".Wafil.chilyoHouze.activity_chilyo_shopping_cart" />

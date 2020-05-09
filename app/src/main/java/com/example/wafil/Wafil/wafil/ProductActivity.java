@@ -49,7 +49,7 @@ public class ProductActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager) this.getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = findViewById(R.id.search);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(this.getComponentName()));
-
+        //Test commit
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

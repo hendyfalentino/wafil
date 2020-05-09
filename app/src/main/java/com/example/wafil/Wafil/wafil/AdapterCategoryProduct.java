@@ -2,6 +2,7 @@ package com.example.wafil.Wafil.wafil;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), ProductActivity.class);
-                mIntent.putExtra("Category", v.getName_category_product());
+                mIntent.putExtra("name_category_product", v.getName_category_product());
                 view.getContext().startActivity(mIntent);
                 Toast.makeText(view.getContext(), v.getName_category_product(), Toast.LENGTH_SHORT).show();
             }

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -38,6 +39,8 @@ public class ProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
+        Intent intent = getIntent();
+        String name_category_product = intent.getStringExtra("name_category_product");
         progressBar = findViewById(R.id.progress);
         recyclerView = findViewById(R.id.recycler);
         layoutManager = new LinearLayoutManager(this);

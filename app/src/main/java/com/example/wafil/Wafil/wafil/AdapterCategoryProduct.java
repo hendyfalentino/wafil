@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
         TextView name_category_product, pricen, pricex, nprice, xprice;
         CardView cardView;
+        ImageView imageView2;
 
         public MyViewHolder(View itemView){
             super(itemView);
@@ -76,6 +78,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
             nprice = itemView.findViewById(R.id.nprice);
             xprice = itemView.findViewById(R.id.xprice);
             cardView = itemView.findViewById(R.id.bs);
+            imageView2 = itemView.findViewById(R.id.imageView2);
         }
     }
 }

@@ -21,6 +21,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.SessionManager;
+import com.example.wafil.Wafil.MainMenuActivity;
+import com.example.wafil.Wafil.MenuActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,7 +33,7 @@ import java.util.Map;
 
 public class EditProfileActivity extends AppCompatActivity {
 
-    private static final String TAG = HomeActivity.class.getSimpleName();
+    private static final String TAG = MenuActivity.class.getSimpleName();
     private TextView user_name;
     private EditText user_first_name;
     private Button btn_save_profile;
@@ -138,7 +140,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     if(success.equals("1")){
                         Toast.makeText(EditProfileActivity.this, "Success!", Toast.LENGTH_SHORT).show();
                         sessionManager.createSession(user_first_name, user_name, user_id);
-                        Intent intent = new Intent(EditProfileActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(EditProfileActivity.this, MenuActivity.class);
                         startActivity(intent);
                     }
                 } catch (JSONException e) {

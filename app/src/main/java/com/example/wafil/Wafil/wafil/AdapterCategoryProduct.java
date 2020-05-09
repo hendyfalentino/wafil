@@ -42,7 +42,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
     @Override
     public void onBindViewHolder(@NonNull AdapterCategoryProduct.MyViewHolder holder, int position) {
         holder.name_category_product.setText(category_product.get(position).getName_category_product());
-        holder.pricen.setText(category_product.get(position).getPrice());
+        holder.pricen.setText(category_product.get(position).getPricen());
         //holder.category_product.setAdapter(itemAdapter);
 
         final Category_Product v = category_product.get(position);

@@ -16,6 +16,7 @@ import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
+import com.example.wafil.Wafil.chilyoHouze.Functions.AddProductToCart;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
@@ -36,11 +37,11 @@ public class ProductDetail extends AppCompatActivity {
     Context context;
     String id_user;
     String product_id;
-    CustomProgressBar progress;
     int product_price;
     int product_qty;
     SessionManager sessionManager;
     Intent intentSettings;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,51 +155,38 @@ public class ProductDetail extends AppCompatActivity {
             }
         });
 
-        progress = new CustomProgressBar();
+        /** tambahkan item ke shopping cart
+         *  Dpe susunan nmboleh rubah neh hen
+         *  Isi jo ini dalam fungsi kong gas
+         * **/
+        String note = main_service_product_note.getText().toString().trim();
+        final Context context = this;
+        final AddProductToCart addCartHandler;
 
-        /** tambahkan item ke shopping cart **/
-        main_service_product_add_to_cart.setOnClickListener(new View.OnClickListener() {
+        /** set interface **/
+        addCartHandler = new AddProductToCart(new AddProductToCart.cartHandler() {
             @Override
-            public void onClick(View view) {
-                showProgress();
-                String note = main_service_product_note.getText().toString().trim();
-                ApiInterface cart = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-                Call<ShoppingCart> call = cart.addToCart(id_user, product_id, product_qty, product_price, note);
-                call.enqueue(new Callback<ShoppingCart>() {
-                    @Override
-                    public void onResponse(Call<ShoppingCart> call, Response<ShoppingCart> response) {
-                        Log.d("getData", String.valueOf(response.isSuccessful()));
-                        Log.d("getData", String.valueOf(response.message()));
-
-                        if(response.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Berhasil Ditambahkan :)",Toast.LENGTH_SHORT).show();
-                            intentSettings = new Intent(ProductDetail.this, ActivityShoppingCart.class);
-                            finish();
-                            startActivity(intentSettings);
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(),"Gagal menambahkan, Silahkan coba lagi",Toast.LENGTH_SHORT).show();
-                            dismissProgress();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ShoppingCart> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(),"Gagal menambahkan, Silahkan coba lagi",Toast.LENGTH_SHORT).show();
-                        dismissProgress();
-                        Log.d("getData", t.toString());
-                    }
-                });
+            public void onSuccess() {
+                Toast.makeText(getApplicationContext(),"Berhasil Ditambahkan :)",Toast.LENGTH_SHORT).show();
+                intentSettings = new Intent(ProductDetail.this, ActivityShoppingCart.class);
+                finish();
+                startActivity(intentSettings);
+            }
+            @Override
+            public void onFailure() {
+                Toast.makeText(getApplicationContext(),"Gagal menambahkan, Silahkan coba lagi",Toast.LENGTH_SHORT).show();
             }
         });
+
+        /** set data untuk dikirim ke database **/
+        addCartHandler.SetData(id_user, product_id, product_qty, product_price, note);
+
+        /** mmenambahkan data ke database
+         * addCartHandler.AddItemToCart(context, BUTTON_VIEW[BUTTON ATAU LAYOUT APAPUN ATO NNI PE BUTTON PE ID]);
+         * **/
+        addCartHandler.AddItemToCart(context, main_service_product_add_to_cart);
+
     }
 
-    private void showProgress(){
-        progress.show(this, "Mohon tunggu");
-    }
-
-    private void dismissProgress(){
-        progress.getDialog().dismiss();
-    }
 }
 

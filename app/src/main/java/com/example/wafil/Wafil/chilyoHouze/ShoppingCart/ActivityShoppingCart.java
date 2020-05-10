@@ -129,7 +129,6 @@ public class ActivityShoppingCart extends AppCompatActivity {
         groupAdapter.setClickGroupListener(new ShoppingCartGroupAdapter.deleteGroupClickListener() {
             @Override
             public void onDeleteClick(String id) {
-
                 deleteData(id);
             }
         });

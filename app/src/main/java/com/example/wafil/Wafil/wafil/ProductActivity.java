@@ -1,17 +1,17 @@
 package com.example.wafil.Wafil.wafil;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
@@ -38,6 +38,8 @@ public class ProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
+        Intent intent = getIntent();
+        final String name_category_product = intent.getStringExtra("name_category_product");
         progressBar = findViewById(R.id.progress);
         recyclerView = findViewById(R.id.recycler);
         layoutManager = new LinearLayoutManager(this);
@@ -47,27 +49,28 @@ public class ProductActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager) this.getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = findViewById(R.id.search);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(this.getComponentName()));
-
+        //Test commit
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                fetchProduct(query);
+                fetchProduct(name_category_product, query);
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String newText) {
-                fetchProduct(newText);
+                fetchProduct(name_category_product, newText);
                 return false;
             }
         });
-        fetchProduct("");
+        fetchProduct(name_category_product,"");
     }
 
 
 
-    public void fetchProduct (String key){
+    public void fetchProduct (String name_category_product, String key){
         apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<List<Product>> call = apiInterface.getProduct(key);
+        Call<List<Product>> call = apiInterface.getProduct(name_category_product, key);
 
         call.enqueue(new Callback<List<Product>>() {
             @Override

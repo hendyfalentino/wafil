@@ -15,10 +15,10 @@
         
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:background="#666666"/>
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
         
         <TextView
             android:id="@+id/name_category_product"
@@ -45,14 +45,22 @@
             android:text=" Isi Ulang : "/>
 
         <TextView
+            android:id="@+id/pricen"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:textSize="13sp"
             android:textColor="#666666"
             android:text="Min"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="2dp"/>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:text="-"
+            android:layout_marginRight="1dp"/>/>
+
+        <TextView
+            android:id="@+id/pricex"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:text="Max"/>
@@ -73,14 +81,22 @@
             android:text=" Galon      : "/>
 
         <TextView
+            android:id="@+id/nprice"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:textSize="13sp"
             android:textColor="#666666"
             android:text="Min"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="2dp"/>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:text="-"
+            android:layout_marginRight="1dp"/>/>
+
+        <TextView
+            android:id="@+id/xprice"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
             android:text="Max"/>

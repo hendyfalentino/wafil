@@ -47,15 +47,6 @@ public class activity_chilyo_main extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.main_service_vendor_view);
 
-        /** Cleon, ganti dpe API yg tarek data di user
-        sessionManager = new SessionManager(this);
-        sessionManager.checkLogIn();
-        HashMap<String, String> user = sessionManager.getUserDetail();
-        getUserId = user.get(SessionManager.user_id);
-        //SessionManager.setAuthUserId("2020001", getBaseContext());
-        //String data = SessionManager.getAuthUserId(getBaseContext());
-        String data = getUserId;
-        Log.d("GetData", data);**/
         elementInit();
         getJson();
     }
@@ -71,7 +62,7 @@ public class activity_chilyo_main extends AppCompatActivity {
         // inisialisasi progress bar
         progress = new CustomProgressBar();
 
-        ImageView activity_chilyo_back = findViewById(R.id.activity_chilyo_back);
+        ImageView activity_chilyo_back = findViewById(R.id.backButton);
         activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

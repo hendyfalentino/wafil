@@ -4,11 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -33,6 +35,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.name_product.setText(product.get(position).getName_product());
         holder.price.setText(product.get(position).getPrice());
+
+        String test = product.get(position).getPic_user();
+        String img = "http://carexports.uk/Admin/assets/img/" + test + ".png";
+        Picasso.with(context).load(img).into(holder.imageView);
     }
 
     @Override
@@ -43,11 +49,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
     public static class MyViewHolder extends  RecyclerView.ViewHolder{
 
         TextView name_product, price;
+        ImageView imageView;
 
         public MyViewHolder(View itemView){
             super(itemView);
             name_product = itemView.findViewById(R.id.name_product);
             price = itemView.findViewById(R.id.price);
+            imageView = itemView.findViewById(R.id.shopping_item_image);
         }
     }
 }

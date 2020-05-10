@@ -1,5 +1,6 @@
 package com.example.wafil.Wafil.API;
 
+import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCartGroup;
@@ -22,7 +23,7 @@ public interface ApiInterface {
 
     @GET("search/search.php")
     Call<List<Product>> getProduct (
-            @Query("key") String keyword
+            @Query("name_category_product") String category_product, @Query("key") String keyword
     );
 
     @GET("search/category_product.php")
@@ -68,6 +69,11 @@ public interface ApiInterface {
 
     @GET("payment/checkPayment.php")
     Call<List<PaymentItem>> getPaymentItem(
+            @Query("user") String user
+    );
+
+    @GET("payment/checkPayment.php")
+    Call<List<OrderItem>> getOrderItem(
             @Query("user") String user
     );
 

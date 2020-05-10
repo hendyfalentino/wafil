@@ -1,6 +1,5 @@
 package com.example.wafil.Wafil.chilyoHouze.Order;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,7 +8,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,15 +15,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.wafil.R;
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
-import com.example.wafil.Wafil.chilyoHouze.Adapters.MainServiceVendorProductsAdapter;
-import com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct.VendorProductDashboard;
-import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainDashboard;
-import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
-import com.example.wafil.Wafil.chilyoHouze.Order.ActivityOrder;
+import com.example.wafil.Wafil.API.SessionManager;
+import com.example.wafil.Wafil.chilyoHouze.Adapters.OrderGetItemAdapter;
+import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
+import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
+import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
+import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
+import com.example.wafil.Wafil.chilyoHouze.Support.Support;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_rating;
-import com.squareup.picasso.Picasso;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -34,43 +36,47 @@ import retrofit2.Response;
 
 public class ActivityOrder extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    MainServiceVendorProductsAdapter adapter;
-    TextView vendor_name, vendor_desc;
-    ImageView vendor_img, backButton;
-    Context context;
+    RecyclerView rv_orderItem;
+    OrderGetItemAdapter adapterOrder;
+    TextView order_amount;
+    Intent intentSettings;
+    SessionManager sessionManager;
+    String getUserId;
+    ImageView activity_chilyo_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_service_vendor_product_dashboard);
-        getSupportActionBar().hide();
 
-        Intent intent = getIntent();
-        String vendor_id = intent.getStringExtra("vendor_id");
-        vendor_name  = findViewById(R.id.main_service_product_dashboard_vendor_name);
-        vendor_img   = findViewById(R.id.main_service_product_dashboard_image);
-        backButton   = findViewById(R.id.backButton);
-        vendor_desc  = findViewById(R.id.main_service_product_dashboard_vendor_desc);
-        recyclerView = findViewById(R.id.main_service_vendor_group);
+        sessionManager = new SessionManager(this);
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        getUserId = user.get(SessionManager.user_id);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_chilyo_order);
 
-        getJson(vendor_id);
+        rv_orderItem = findViewById(R.id.rv_orderItem);
+        order_amount = findViewById(R.id.order_amount);
+
+        getJson();
 
         elementInit();
 
-        // Selesai Order
-        Button complete_button = findViewById(R.id.complete_button);
-        complete_button.setOnClickListener(new View.OnClickListener() {
+        /** kembali ke menu utama **/
+        activity_chilyo_back = findViewById(R.id.activity_chilyo_back);
+        activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentSettings = new Intent(ActivityOrder.this, activity_chilyo_rating.class);
+                intentSettings = new Intent(ActivityOrder.this, activity_chilyo_main.class);
+                startActivity(intentSettings);
+            }
+        });
+
+        /** tombol Selesai **/
+        Button pay_book_now = findViewById(R.id.complete_button);
+        pay_book_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentSettings = new Intent(ActivityOrder.this, activity_chilyo_rating.class);
                 startActivity(intentSettings);
             }
         });
@@ -79,32 +85,39 @@ public class ActivityOrder extends AppCompatActivity {
     private void elementInit() {
     }
 
-    private void getJson(String vendor_id) {
+    private void getJson(){
         ApiInterface service = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<VendorMainDashboard> call = service.getSpecificVendor(vendor_id);
-        call.enqueue(new Callback<VendorMainDashboard>() {
+        Call<List<OrderItem>> call = service.getOrderItem(getUserId);
+        call.enqueue(new Callback<List<OrderItem>>() {
             @Override
-            public void onResponse(@NonNull Call<VendorMainDashboard> call, @NonNull Response<VendorMainDashboard> response) {
-                if(response.body() != null){
-                    Picasso.with(context).load(response.body().getVendor_img()).into(vendor_img);
-                    vendor_name.setText(response.body().getVendor_name());
-                    vendor_desc.setText(response.body().getVendor_desc());
-                    generateDataList(response.body().getVendor_product());
-                }
-            }
+            public void onResponse(Call<List<OrderItem>> call, Response<List<OrderItem>> response) {
+                List<OrderItem> data = response.body();
+                int i = 0;
+                int size = data.size();
+                int total = 0;
 
+                for(i = 0; i < size; i++){
+                    total += Integer.parseInt(data.get(i).getProduct_price());
+                }
+
+                String total_ = Integer.toString(total);
+                order_amount.setText(Support.rupiahFormat(total_) + " K");
+
+                Log.d("GetData", total_);
+                generateDataList(response.body());
+                //progress.getDialog().dismiss();
+            }
             @Override
-            public void onFailure(Call<VendorMainDashboard> call, Throwable t) {
+            public void onFailure(Call<List<OrderItem>> call, Throwable t) {
                 Log.d("GetData", t.toString());
             }
         });
     }
 
-    private void generateDataList(List<VendorProduct> vendor_product) {
-        List<VendorProduct> vendorProduct = null;
-        adapter = new MainServiceVendorProductsAdapter(ActivityOrder.this, vendorProduct);
+    private void generateDataList(List<OrderItem> orderitem) {
+        adapterOrder = new OrderGetItemAdapter(this, orderitem);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ActivityOrder.this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        rv_orderItem.setLayoutManager(layoutManager);
+        rv_orderItem.setAdapter(adapterOrder);
     }
 }

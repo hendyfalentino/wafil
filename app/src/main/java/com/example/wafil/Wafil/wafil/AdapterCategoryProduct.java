@@ -2,10 +2,10 @@ package com.example.wafil.Wafil.wafil;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wafil.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,19 +43,26 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
     @Override
     public void onBindViewHolder(@NonNull AdapterCategoryProduct.MyViewHolder holder, int position) {
         holder.name_category_product.setText(category_product.get(position).getName_category_product());
-        //holder.category_product.setAdapter(itemAdapter);
+        holder.pricen.setText(category_product.get(position).getPricen());
+        holder.pricex.setText(category_product.get(position).getPricex());
+        holder.nprice.setText(category_product.get(position).getNprice());
+        holder.xprice.setText(category_product.get(position).getXprice());
 
         final Category_Product v = category_product.get(position);
         holder.cardView.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), ProductActivity.class);
-                mIntent.putExtra("Category", v.getName_category_product());
+                mIntent.putExtra("name_category_product", v.getName_category_product());
                 view.getContext().startActivity(mIntent);
                 Toast.makeText(view.getContext(), v.getName_category_product(), Toast.LENGTH_SHORT).show();
             }
         }));
+        String test = category_product.get(position).getName_category_product();
+        String img = "http://carexports.uk/Admin/assets/img/" + test + ".png";
+        Picasso.with(context).load(img).into(holder.imageView2);
     }
+
     //TEST
     @Override
     public int getItemCount() {
@@ -63,15 +71,20 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
 
     public static class MyViewHolder extends  RecyclerView.ViewHolder{
 
-        TextView name_category_product;
-        RecyclerView category_product;
+        TextView name_category_product, pricen, pricex, nprice, xprice;
         CardView cardView;
+        ImageView imageView2;
 
         public MyViewHolder(View itemView){
             super(itemView);
+
             name_category_product = itemView.findViewById(R.id.name_category_product);
-            //category_product = itemView.findViewById(R.id.category_product);
+            pricen = itemView.findViewById(R.id.pricen);
+            pricex = itemView.findViewById(R.id.pricex);
+            nprice = itemView.findViewById(R.id.nprice);
+            xprice = itemView.findViewById(R.id.xprice);
             cardView = itemView.findViewById(R.id.bs);
+            imageView2 = itemView.findViewById(R.id.imageView2);
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.wafil.Wafil.API;
 
+import com.example.wafil.Wafil.chilyoHouze.Model.ErrorClass;
 import com.example.wafil.Wafil.chilyoHouze.Model.OrderItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
@@ -75,6 +76,11 @@ public interface ApiInterface {
     @GET("payment/checkPayment.php")
     Call<List<OrderItem>> getOrderItem(
             @Query("user") String user
+    );
+
+    @GET("shoppingCart/deleteShoppingCart.php")
+    Call<ErrorClass> deleteShoppingCart(
+            @Query("id_shopcart") String id_shopcart
     );
 
 }

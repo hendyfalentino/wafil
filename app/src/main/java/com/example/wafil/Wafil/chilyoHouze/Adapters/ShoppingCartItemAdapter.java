@@ -75,7 +75,7 @@ public class ShoppingCartItemAdapter extends RecyclerView.Adapter<ShoppingCartIt
         holder.shopping_item_remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                click_listener.onDeleteClick(v.getProduct_id());
+                click_listener.onDeleteClick(v.getShopcart_id());
             }
         });
 

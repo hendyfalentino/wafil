@@ -4,6 +4,11 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class VendorProduct {
+
+    @SerializedName("shopcart_id")
+    @Expose
+    private String shopcart_id;
+
     @SerializedName("product_id")
     @Expose
     private String product_id;
@@ -27,6 +32,14 @@ public class VendorProduct {
     @SerializedName("product_note")
     @Expose
     private String product_note;
+
+    public String getShopcart_id() {
+        return shopcart_id;
+    }
+
+    public void setShopcart_id(String shopcart_id) {
+        this.shopcart_id = shopcart_id;
+    }
 
     public String getProduct_note() {
         return product_note;

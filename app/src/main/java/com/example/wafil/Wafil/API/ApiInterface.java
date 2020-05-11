@@ -65,7 +65,11 @@ public interface ApiInterface {
             @Field("id_service_product") String id_service_product,
             @Field("shopcart_qty") int shopcart_qty,
             @Field("shopcart_price") int shopcart_price,
-            @Field("shopcart_note") String shopcart_note
+            @Field("shopcart_note") String shopcart_note,
+            @Field("deliver_to_lat") String deliver_to_lat,
+            @Field("deliver_to_long") String deliver_to_long,
+            @Field("deliver_to_string_place") String deliver_to_string_place,
+            @Field("deliver_to_date") String deliver_to_date
     );
 
     @GET("payment/checkPayment.php")

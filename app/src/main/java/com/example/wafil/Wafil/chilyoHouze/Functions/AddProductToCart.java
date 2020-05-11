@@ -26,11 +26,11 @@ public class AddProductToCart {
         this.handler = handler;
     }
 
-    public void addToCart(Context context, String id_user, String product_id, int product_qty, int product_price, String note){
+    public void addToCart(Context context, String id_user, String product_id, int product_qty, int product_price, String note, String deliver_to_lat, String deliver_to_long, String deliver_to_string_place, String deliver_to_date){
         customProgressBar = new CustomProgressBar();
         customProgressBar.show(context, "Mohon tunggu");
         ApiInterface cart = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<ShoppingCart> call = cart.addToCart(id_user, product_id, product_qty, product_price, note);
+        Call<ShoppingCart> call = cart.addToCart(id_user, product_id, product_qty, product_price, note, deliver_to_lat, deliver_to_long, deliver_to_string_place, deliver_to_date);
         call.enqueue(new Callback<ShoppingCart>() {
             @Override
             public void onResponse(Call<ShoppingCart> call, Response<ShoppingCart> response) {

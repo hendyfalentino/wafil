@@ -7,6 +7,10 @@ public class ShoppingCart {
     private int shopcart_qty ;
     private int shopcart_price;
     private String shopcart_note;
+    private String deliver_to_lat;
+    private String deliver_to_long;
+    private String deliver_to_string_place;
+    private String deliver_to_date;
 
     public String getId_user() {
         return id_user;
@@ -46,6 +50,38 @@ public class ShoppingCart {
 
     public void setShopcart_note(String shopcart_note) {
         this.shopcart_note = shopcart_note;
+    }
+
+    public String getDeliver_to_lat() {
+        return deliver_to_lat;
+    }
+
+    public void setDeliver_to_lat(String deliver_to_lat) {
+        this.deliver_to_lat = deliver_to_lat;
+    }
+
+    public String getDeliver_to_long() {
+        return deliver_to_long;
+    }
+
+    public void setDeliver_to_long(String deliver_to_long) {
+        this.deliver_to_long = deliver_to_long;
+    }
+
+    public String getDeliver_to_string_place() {
+        return deliver_to_string_place;
+    }
+
+    public void setDeliver_to_string_place(String deliver_to_string_place) {
+        this.deliver_to_string_place = deliver_to_string_place;
+    }
+
+    public String getDeliver_to_date() {
+        return deliver_to_date;
+    }
+
+    public void setDeliver_to_date(String deliver_to_date) {
+        this.deliver_to_date = deliver_to_date;
     }
 }
 

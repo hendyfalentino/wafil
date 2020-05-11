@@ -41,7 +41,7 @@ public class ProductDetail extends AppCompatActivity {
     int product_qty;
     SessionManager sessionManager;
     Intent intentSettings;
-
+    AddProductToCart addCartHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,9 +159,7 @@ public class ProductDetail extends AppCompatActivity {
          *  Dpe susunan nmboleh rubah neh hen
          *  Isi jo ini dalam fungsi kong gas
          * **/
-        String note = main_service_product_note.getText().toString().trim();
-        final Context context = this;
-        final AddProductToCart addCartHandler;
+        context = this;
 
         /** set interface **/
         addCartHandler = new AddProductToCart(new AddProductToCart.cartHandler() {
@@ -178,13 +176,18 @@ public class ProductDetail extends AppCompatActivity {
             }
         });
 
-        /** set data untuk dikirim ke database **/
-        addCartHandler.SetData(id_user, product_id, product_qty, product_price, note);
+        main_service_product_add_to_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String note = main_service_product_note.getText().toString().trim();
+                addCartHandler.addToCart(context, id_user, product_id, product_qty, product_price, note);
+            }
+        });
 
         /** mmenambahkan data ke database
          * addCartHandler.AddItemToCart(context, BUTTON_VIEW[BUTTON ATAU LAYOUT APAPUN ATO NNI PE BUTTON PE ID]);
          * **/
-        addCartHandler.AddItemToCart(context, main_service_product_add_to_cart);
+
 
     }
 

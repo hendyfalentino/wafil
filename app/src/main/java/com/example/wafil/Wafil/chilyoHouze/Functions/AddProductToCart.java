@@ -21,31 +21,12 @@ public class AddProductToCart {
 
     private cartHandler handler;
     private CustomProgressBar customProgressBar;
-    private String id_user, product_id, note;
-    private int product_qty, product_price;
 
     public AddProductToCart(cartHandler handler) {
         this.handler = handler;
     }
 
-    public void SetData(String id_user, String product_id, int product_qty, int product_price, String note){
-        this.id_user = id_user;
-        this.product_id = product_id;
-        this.note = note;
-        this.product_qty = product_qty;
-        this.product_price = product_price;
-    }
-
-    public void AddItemToCart(final Context context, View view){
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addToCart(context);
-            }
-        });
-    }
-
-    public void addToCart(Context context){
+    public void addToCart(Context context, String id_user, String product_id, int product_qty, int product_price, String note){
         customProgressBar = new CustomProgressBar();
         customProgressBar.show(context, "Mohon tunggu");
         ApiInterface cart = ApiClient.getRetrofitInstance().create(ApiInterface.class);

@@ -40,7 +40,6 @@ public class ActivityShoppingCart extends AppCompatActivity {
     ShoppingCartGroupAdapter groupAdapter;
     TextView product_name;
     TextView product_price;
-
     CustomProgressBar progress;
     RecyclerView rv_shopping_cart_group;
     RecyclerView rv_shopping_cart_item;

@@ -143,8 +143,9 @@ public class ProductDetail extends AppCompatActivity {
                     product_price            = Integer.parseInt(response.body().getProduct_price());
                     product_qty              = Integer.parseInt(response.body().getProduct_qty());
                     deliver_to_string_place  = response.body().getDeliver_to_string_place();
+                    deliver_to_date          = response.body().getDeliver_to_date();
 
-                    if(response.body().getDeliver_to_lat() != null){
+                    if(!response.body().getDeliver_to_lat().equals("") && !response.body().getDeliver_to_long().equals("")){
                         deliver_to_lat   = Double.valueOf(response.body().getDeliver_to_lat());
                         deliver_to_long  = Double.valueOf(response.body().getDeliver_to_long());
                     }
@@ -155,8 +156,14 @@ public class ProductDetail extends AppCompatActivity {
                     main_service_product_desc.setText(response.body().getProduct_desc());
                     main_service_product_qty.setText(response.body().getProduct_qty());
                     main_service_product_note.setText(response.body().getProduct_desc());
-                    text_deliver_to_place.setText(deliver_to_string_place);
-                    text_deliver_to_date.setText(deliver_to_date);
+
+                    if(!deliver_to_string_place.equals("")){
+                        text_deliver_to_place.setText(deliver_to_string_place);
+                    }
+
+                    if(!deliver_to_date.equals("")){
+                        text_deliver_to_date.setText(deliver_to_date);
+                    }
 
                     // setting data for the first time
                     String total = "Tambahkan - " + String.valueOf(Support.rupiahFormat(String.valueOf(product_qty * product_price))) + " koin";

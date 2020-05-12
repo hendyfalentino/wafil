@@ -64,17 +64,4 @@ public class SessionManager {
         ((LogoutActivity)context).finish();
 
     }
-    /*
-    public static void setAuthUserId(String user_auth,Context context){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("user_auth", user_auth);
-        editor.apply();
-    }
-
-    public static String getAuthUserId(Context context){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getString("user_auth", null);
-    }
-    */
 }

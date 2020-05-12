@@ -37,9 +37,13 @@ public class OrderGetItemAdapter extends RecyclerView.Adapter<OrderGetItemAdapte
     @Override
     public void onBindViewHolder(@NonNull OrderGetItemAdapter.ViewHolder holder, int position) {
         final OrderItem v = dataList.get(position);
-        holder.order_qty.setText(v.getProduct_qty()+" x");
+        int qty = Integer.parseInt(v.getProduct_qty());
+        int price = Integer.parseInt(v.getProduct_price());
+        int price_qty = qty * price;
+        String price_and_qty = Support.rupiahFormat(String.valueOf(price_qty) + " k");
+        holder.order_qty.setText(String.valueOf(qty)+" x");
         holder.order_name.setText(v.getProduct_name());
-        holder.order_price.setText(Support.rupiahFormat(v.getProduct_price())+" K");
+        holder.order_price.setText(price_and_qty);
     }
 
     @Override

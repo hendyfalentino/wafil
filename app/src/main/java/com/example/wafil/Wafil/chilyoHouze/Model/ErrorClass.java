@@ -3,8 +3,7 @@ package com.example.wafil.Wafil.chilyoHouze.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Error {
-
+public class ErrorClass {
     @SerializedName("kode")
     @Expose
     private String kode;
@@ -29,4 +28,3 @@ public class Error {
         this.pesan = pesan;
     }
 }
-

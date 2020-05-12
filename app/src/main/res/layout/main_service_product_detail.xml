@@ -121,8 +121,8 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ic_access_time_black_24dp"/>
 
                     <LinearLayout
@@ -170,8 +170,8 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:src="@drawable/ic_map_black_24dp"/>
 
                     <LinearLayout
@@ -233,7 +233,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="80dp">
 
                 <ImageView
                     android:id="@+id/min_qty"
@@ -272,25 +272,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- button add to cart -->
-            <Button
-                android:id="@+id/main_service_product_add_to_cart"
-                android:text="Tambahkan - 20.000 koin"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:background="@android:color/holo_blue_light"
-                android:fontFamily="@font/productsansbold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:textColor="@color/white"
-                android:layout_marginBottom="30dp"/>
-
         </LinearLayout>
 
     </ScrollView>
@@ -307,5 +288,21 @@
         android:src="@drawable/ic_arrow_thin_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <!-- button add to cart -->
+    <Button
+        android:id="@+id/main_service_product_add_to_cart"
+        android:text="Tambahkan - 20.000 koin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:fontFamily="@font/productsansbold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

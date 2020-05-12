@@ -1,12 +1,14 @@
 package com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
 import com.example.wafil.Wafil.chilyoHouze.Functions.AddProductToCart;
+import com.example.wafil.Wafil.chilyoHouze.Functions.OpenCalendarDialog;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Model.VendorProduct;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
@@ -33,8 +36,11 @@ import com.sucho.placepicker.PlacePicker;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -62,12 +68,15 @@ public class ProductDetail extends AppCompatActivity {
     String  deliver_to_string_place, deliver_to_date;
     Double deliver_to_lat, deliver_to_long;
     Activity activity_this;
+    DatePickerDialog.OnDateSetListener date;
+    OpenCalendarDialog openCalendarDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_service_product_detail);
 
+        context = this;
         deliver_to_lat = 1.504469;
         deliver_to_long = 124.908277;
         deliver_to_date = "Tanggal";
@@ -100,6 +109,22 @@ public class ProductDetail extends AppCompatActivity {
         startActivityForResult(intent, Constants.PLACE_PICKER_REQUEST);
     }
 
+    /**
+     * Fungsi untuk membuka calendar
+     */
+    private void initCalendar(){
+        openCalendarDialog = new OpenCalendarDialog(context);
+        openCalendarDialog.setDateInterface(new OpenCalendarDialog.onDateSet() {
+            @Override
+            public void onSuccess(String date) {
+                deliver_to_date = date;
+                text_deliver_to_date.setText(deliver_to_date);
+            }
+        });
+        openCalendarDialog.addCalendarListener();
+        openCalendarDialog.openCalendarWithView(Product_ChooseDate);
+    }
+
     private void elementInit(){
 
         // text view
@@ -122,13 +147,6 @@ public class ProductDetail extends AppCompatActivity {
         Product_ChooseLocation = findViewById(R.id.Product_ChooseLocation);
         Product_ChooseDate = findViewById(R.id.Product_ChooseDate);
 
-        Product_ChooseDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         // back button
         backButton = findViewById(R.id.backButton);
     }
@@ -140,6 +158,7 @@ public class ProductDetail extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Call<VendorProduct> call, @NotNull Response<VendorProduct> response) {
                 if(response.body() != null){
+                    initCalendar();
                     product_price            = Integer.parseInt(response.body().getProduct_price());
                     product_qty              = Integer.parseInt(response.body().getProduct_qty());
                     deliver_to_string_place  = response.body().getDeliver_to_string_place();
@@ -226,7 +245,6 @@ public class ProductDetail extends AppCompatActivity {
          *  Dpe susunan nmboleh rubah neh hen
          *  Isi jo ini dalam fungsi kong gas
          * **/
-        context = this;
 
         /** set interface **/
         addCartHandler = new AddProductToCart(new AddProductToCart.cartHandler() {
@@ -238,8 +256,8 @@ public class ProductDetail extends AppCompatActivity {
                 startActivity(intentSettings);
             }
             @Override
-            public void onFailure() {
-                Toast.makeText(getApplicationContext(),"Gagal menambahkan, Silahkan coba lagi",Toast.LENGTH_SHORT).show();
+            public void onFailure(String kode) {
+                Toast.makeText(getApplicationContext(),kode,Toast.LENGTH_SHORT).show();
             }
         });
 

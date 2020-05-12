@@ -1,16 +1,11 @@
 package com.example.wafil.Wafil.chilyoHouze.Functions;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
-import com.example.wafil.Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail;
 import com.example.wafil.Wafil.chilyoHouze.Model.ShoppingCart;
-import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.CustomProgressBar;
 
 import retrofit2.Call;
@@ -28,6 +23,17 @@ public class AddProductToCart {
 
     public void addToCart(Context context, String id_user, String product_id, int product_qty, int product_price, String note, String deliver_to_lat, String deliver_to_long, String deliver_to_string_place, String deliver_to_date){
         customProgressBar = new CustomProgressBar();
+
+        if(deliver_to_date.equals("")){
+            handler.onFailure("Tanggal belum ditentukan!");
+            return;
+        }
+
+        if(deliver_to_string_place.equals("")){
+            handler.onFailure("Lokasi belum ditentukan!");
+            return;
+        }
+
         customProgressBar.show(context, "Mohon tunggu");
         ApiInterface cart = ApiClient.getRetrofitInstance().create(ApiInterface.class);
         Call<ShoppingCart> call = cart.addToCart(id_user, product_id, product_qty, product_price, note, deliver_to_lat, deliver_to_long, deliver_to_string_place, deliver_to_date);
@@ -41,10 +47,9 @@ public class AddProductToCart {
                     customProgressBar.getDialog().dismiss();
                 }
             }
-
             @Override
             public void onFailure(Call<ShoppingCart> call, Throwable t) {
-                handler.onFailure();
+                handler.onFailure("Error menambahkan data");
                 customProgressBar.getDialog().dismiss();
                 Log.d("getData", t.toString());
             }
@@ -53,6 +58,6 @@ public class AddProductToCart {
 
     public interface cartHandler{
         void onSuccess();
-        void onFailure();
+        void onFailure(String kode);
     }
 }

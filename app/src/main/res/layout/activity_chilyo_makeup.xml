@@ -57,11 +57,12 @@
             android:layout_marginRight="30dp"
             tools:ignore="MissingConstraints" >
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/main_service_vendor_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem="@layout/main_service_vendor_online_item"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_service_vendor_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/main_service_vendor_online_item"/>
+
         </LinearLayout>
 
     </LinearLayout>

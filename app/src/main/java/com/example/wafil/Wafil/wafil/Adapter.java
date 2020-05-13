@@ -2,12 +2,14 @@ package com.example.wafil.Wafil.wafil;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +39,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
+        final Product v = product.get(position);
         holder.name_product.setText(product.get(position).getName_product());
         holder.price.setText(product.get(position).getPrice());
 
@@ -49,7 +52,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), ProductDetail.class);
-                mIntent.putExtra("product_id", product.get(position).getProduct_id());
+                mIntent.putExtra("product_id", v.getId_product());
                 view.getContext().startActivity(mIntent);
             }
         });

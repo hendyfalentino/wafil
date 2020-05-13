@@ -262,7 +262,6 @@ public class ProductDetail extends AppCompatActivity {
         });
 
         /** mmenambahkan data ke database
-         * addCartHandler.AddItemToCart(context, BUTTON_VIEW[BUTTON ATAU LAYOUT APAPUN ATO NNI PE BUTTON PE ID]);
          * **/
         main_service_product_add_to_cart.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -121,7 +121,7 @@ public class ActivityPayment extends AppCompatActivity {
                 }
 
                 String total_ = Integer.toString(total);
-                order_amount.setText(Support.rupiahFormat(total_) + " K");
+                order_amount.setText("Rp " + Support.rupiahFormat(total_));
 
                 Log.d("GetData", total_);
                 generateDataList(response.body());

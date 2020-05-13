@@ -21,6 +21,10 @@
         <activity android:name=".Wafil.wafil.ServiceTypeActivity" />
         <activity android:name=".Wafil.wafil.ProductActivity" />
         <activity android:name=".Wafil.MenuActivity" />
+        <activity android:name=".Wafil.giziTest.SignUp"/>
+        <activity android:name=".Wafil.giziTest.SignUpGoal"/>
+        <activity android:name=".Wafil.giziTest.FragmentActivity"/>
+
         <activity
             android:name=".Wafil.atorJo.Activity2"
             android:parentActivityName=".Wafil.MenuActivity" />

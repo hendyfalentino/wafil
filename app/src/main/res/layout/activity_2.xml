@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="@drawable/atorjo_bg">
+    android:background="@color/backgroundcolor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -109,7 +109,7 @@
 
                 <!-- tombol make up -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_make_up_button"
+                    android:id="@+id/activity_atorjo_bersihRumah"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -118,6 +118,7 @@
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/activity_atorjo_bersih_rmh_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/logo_bersih_rumah" />
@@ -125,7 +126,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Make Up"
+                        android:text="Bersih Rumah"
                         android:textAlignment="center"
                         android:fontFamily="@font/productsansbold"
                         android:textSize="13sp"
@@ -141,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_make_up_button"
+                    app:layout_constraintLeft_toRightOf="@id/activity_atorjo_bersihRumah"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
@@ -152,7 +153,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Self Nail"
+                        android:text="Bersih Kantor"
                         android:textAlignment="center"
                         android:fontFamily="@font/productsansbold"
                         android:textSize="13sp"
@@ -179,7 +180,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Spa"
+                        android:text="Pengemas"
                         android:textAlignment="center"
                         android:fontFamily="@font/productsansbold"
                         android:textSize="13sp"

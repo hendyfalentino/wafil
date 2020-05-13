@@ -54,15 +54,6 @@ public class ServiceTypeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView shopping_cart_button = findViewById(R.id.activity_chilyo_cart);
-        shopping_cart_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intentSettings = new Intent(ServiceTypeActivity.this, ActivityShoppingCart.class);
-                startActivity(intentSettings);
-            }
-        });
-
         ImageView delivery = findViewById(R.id.acitvity_chilyo_make_up_button1);
         delivery.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
+import com.example.wafil.Wafil.aMarket.HomeAdmin;
 import com.example.wafil.Wafil.atorJo.Activity2;
 import com.example.wafil.Wafil.basBangunan.BasBangunanMainActivity;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
@@ -23,7 +24,7 @@ import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
 
-    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest;
+    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest, btn_market;
 
     @Nullable
     @Override
@@ -36,6 +37,7 @@ public class MainMenuActivity extends Fragment {
         btn_atorjo = v.findViewById(R.id.btn_atorjo);
         btn_basbangunan = v.findViewById(R.id.btn_basbangunan);
         btn_gizitest = v.findViewById(R.id.btn_gizitest);
+        btn_market = v.findViewById(R.id.btn_market);
 
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +78,13 @@ public class MainMenuActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), SignUp.class);
+                startActivity(intent);
+            }
+        });
+        btn_market.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HomeAdmin.class);
                 startActivity(intent);
             }
         });

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wafil.aMarket.KeluarBarang">
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back"
+        android:layout_below="@id/etkb11"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+
+        android:textStyle="bold"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:id="@+id/etkb1"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView111"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etkb2"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Barang Bagus"
+            android:inputType="number"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etkb10"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Barang Rusak"
+            android:inputType="number"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayout2"
+        android:id="@+id/etkb4"
+        android:layout_marginTop="20dp"
+        android:text="Tanggal"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/etkb5"
+        android:layout_below="@id/etkb4"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/back" />
+
+    <Button
+        android:id="@+id/ton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/etkb5"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:text="Simpan" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Barang"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/etkb11"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textView111"
+        android:background="@drawable/back"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:layout_height="40dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/etkb1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

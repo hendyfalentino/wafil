@@ -13,7 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".Wafil.giziTest.GiziTestMainActivity"></activity>
-        <activity android:name=".Wafil.basBangunan.BasBangunanMainActivity" /> <!-- Google Maps API Key -->
+        <activity android:name=".Wafil.basBangunan.BasBangunanMainActivity" />
+        <activity android:name=".Wafil.aMarket.HomeAdmin"/>
+        <activity android:name=".Wafil.aMarket.TambahBarang"/>
+        <activity android:name=".Wafil.aMarket.KeluarBarang"/>
+        <activity android:name=".Wafil.aMarket.LihatBarang"/>
+        <activity android:name=".Wafil.aMarket.LoginActivity"/>
+        <activity android:name=".Wafil.aMarket.MainActivity"/>
+        <activity android:name=".Wafil.aMarket.SMS"/>
+        <activity android:name=".Wafil.aMarket.UbahBarang"/>
+        <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U" />

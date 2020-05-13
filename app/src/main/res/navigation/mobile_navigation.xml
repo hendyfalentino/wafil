@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_beranda">
+
+    <fragment
+        android:id="@+id/navigation_beranda"
+        android:name="com.example.wafil.Wafil.basBangunan.ui.Beranda.BerandaFragment"
+        android:label="@string/title_beranda"
+        tools:layout="@layout/fragment_beranda" />
+
+    <fragment
+        android:id="@+id/navigation_pesanan"
+        android:name="com.example.wafil.Wafil.basBangunan.ui.Pesanan.PesananFragment"
+        android:label="@string/title_pesanan"
+        tools:layout="@layout/fragment_pesanan" />
+
+    <fragment
+        android:id="@+id/navigation_akun"
+        android:name="com.example.wafil.Wafil.basBangunan.ui.Akun.AkunFragment"
+        android:label="@string/title_akun"
+        tools:layout="@layout/fragment_akun" />
+</navigation>

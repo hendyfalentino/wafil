@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5FFFFFF"
+    android:orientation="vertical"
+    android:layout_marginBottom="62dp"
+    tools:context="Wafil.basBangunan.BasBangunanMainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/nama_app"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_notifications_black_24dp" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/background_info_saldo">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Info Saldo:"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="30dp"
+                android:hint="Rp. 0"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Top Up Saldo"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Apa yang ingin diperbaiki ?"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+        android:text="Barang non-elektronik:"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_panahkiri_foreground"/>
+
+    <HorizontalScrollView
+        android:layout_width="300sp"
+        android:layout_height="80dp">
+       <LinearLayout
+           android:layout_width="260sp"
+           android:layout_height="70dp"
+           android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/img_pipa_air"
+            android:src="@drawable/pipa_air"/>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/img_atap_rumah"
+            android:layout_height="match_parent"
+            android:src="@drawable/genteng"/>
+
+           <ImageButton
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+               android:id="@+id/img_wc"
+            android:src="@drawable/wc"/>
+
+           <ImageButton
+               android:id="@+id/img_sofa"
+               android:layout_width="73dp"
+               android:layout_height="match_parent"
+               android:layout_marginLeft="10dp"
+               android:src="@drawable/sofa" />
+
+           <ImageButton
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+               android:id="@+id/img_cat_dinding"
+            android:src="@drawable/cat_dinding"/>
+
+           <ImageButton
+            android:layout_width="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+               android:id="@+id/img_ubin"
+            android:src="@drawable/ubin"/>
+
+
+
+       </LinearLayout>
+
+    </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_panahkanan_foreground"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Barang elektronik:"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_panahkiri_foreground"/>
+
+        <HorizontalScrollView
+            android:layout_width="300sp"
+            android:layout_height="80dp">
+            <LinearLayout
+                android:layout_width="260sp"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_ac"
+                    android:src="@drawable/ac"/>
+
+                <ImageButton
+                    android:id="@+id/img_listrik"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/listrik" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_kulkas"
+                    android:src="@drawable/kulkas"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_kipas_angin"
+                    android:src="@drawable/kipas_angin"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_komputer"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/komputer" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_mesin_cuci"
+                    android:src="@drawable/mesin_cuci"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/img_tv"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tv"/>
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_panahkanan_foreground"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

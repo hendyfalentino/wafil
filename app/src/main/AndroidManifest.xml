@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Wafil.atorJo.MainActivityAtorjo"></activity>
-        <!-- Google Maps API Key -->
+        <activity android:name=".Wafil.giziTest.GiziTestMainActivity"></activity>
+        <activity android:name=".Wafil.basBangunan.BasBangunanMainActivity" /> <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U" />
@@ -29,7 +29,6 @@
         <activity android:name=".Wafil.MainMenuActivity" />
         <activity android:name=".Wafil.LogoutActivity" />
         <activity android:name=".Wafil.wafil.EditProfileActivity" />
-        <activity android:name=".Wafil.wafil.HomeActivity" />
         <activity android:name=".Wafil.RegisterActivity" />
         <activity android:name=".Wafil.LoginActivity" />
         <activity android:name=".Wafil.wafil.MainActivity">

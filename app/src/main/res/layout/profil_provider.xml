@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Wafil.basBangunan.PROVIDER.ProfilProvider">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:id="@+id/foto_profil"
+                    android:src="@drawable/ic_profil_foreground"/>
+                <TextView
+                    android:id="@+id/texview_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Nama anda"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:drawableLeft="@drawable/ic_group_black_24dp"
+                android:id="@+id/txt_no_tlpn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No Tlpn"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:id="@+id/txtemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <TextView
+                android:id="@+id/editText4"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_below="@+id/textView4"
+                android:inputType="text"
+                android:maxLength="1"
+                android:hint="L atau P"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <TextView
+                android:id="@+id/editText5"
+                android:drawableLeft="@drawable/ic_place_black_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Alamat"/>
+
+
+            <Button
+                android:id="@+id/button_edit"
+                android:layout_width="wrap_content"
+                android:nextFocusLeft="@id/foto_profil"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/ic_edit_card_black_24dp"
+                android:text="Edit Profil"
+                android:textColor="#FFFF00"
+                android:textSize="15sp"
+                android:layout_gravity="right"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Logout"
+
+                android:gravity="right"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

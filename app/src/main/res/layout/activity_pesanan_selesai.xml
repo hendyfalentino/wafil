@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="Wafil.basBangunan.Pesanan_selesai.PesananSelesai">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:text="Terimakasih Sudah Menggunakan Jasa Kami..."/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#676262"
+        android:textSize="25dp"
+        android:text="Yuk beri Rating...."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:id="@+id/foto_tukng"
+            android:src="@drawable/ic_profil_foreground"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:hint="Nama tukang"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/kuning"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Berikan Penilaian Anda"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/penilaian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="0.5" />
+
+
+
+        <TextView
+            android:id="@+id/rate"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating:"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/pesan_lagi"
+            android:layout_marginLeft="10dp"
+            android:background="@color/kuning"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Pesan Lagi"/>
+        <Button
+            android:id="@+id/keluar"
+            android:layout_marginLeft="10dp"
+            android:background="@color/kuning"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Keluar"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -13,14 +13,17 @@ import androidx.fragment.app.Fragment;
 
 import com.example.wafil.R;
 import com.example.wafil.Wafil.atorJo.Activity2;
+import com.example.wafil.Wafil.basBangunan.BasBangunanMainActivity;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
+import com.example.wafil.Wafil.giziTest.GiziTestMainActivity;
+import com.example.wafil.Wafil.giziTest.SignUp;
 import com.example.wafil.Wafil.print.MapActivity;
 import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
 
-    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo;
+    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest;
 
     @Nullable
     @Override
@@ -31,6 +34,8 @@ public class MainMenuActivity extends Fragment {
         btn_print = v.findViewById(R.id.btn_print);
         btn_chilyo = v.findViewById(R.id.btn_chilyo);
         btn_atorjo = v.findViewById(R.id.btn_atorjo);
+        btn_basbangunan = v.findViewById(R.id.btn_basbangunan);
+        btn_gizitest = v.findViewById(R.id.btn_gizitest);
 
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +62,20 @@ public class MainMenuActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Activity2.class);
+                startActivity(intent);
+            }
+        });
+        btn_basbangunan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), BasBangunanMainActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_gizitest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SignUp.class);
                 startActivity(intent);
             }
         });

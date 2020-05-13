@@ -108,26 +108,102 @@
                 android:orientation="vertical">
 
                 <!-- DATE BOOKING -->
-                <EditText
-                    android:id="@+id/edit_date"
-                    android:layout_width="150dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/Product_ChooseDate"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Select Date"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginEnd="130dp"/>
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
 
-                <!-- PLACE -->
-                <Button
-                    android:id="@+id/place_btn_review"
-                    android:layout_width="150dp"
+                    <ImageView
+                        android:id="@+id/Product_DateImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_access_time_black_24dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/Product_DateImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Waktu Pemesanan"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/productsansbold"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/text_deliver_to_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pilih tanggal pemesanan"
+                            android:textSize="13sp"
+                            android:textColor="@color/gray"
+                            android:fontFamily="@font/productsansbold"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- PLACE BOOKING -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/Product_ChooseLocation"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Select Place"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginEnd="130dp"/>
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp">
+
+                    <ImageView
+                        android:id="@+id/Product_PlaceImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_map_black_24dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toRightOf="@id/Product_PlaceImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lokasi Pemesanan"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/productsansbold"/>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/text_deliver_to_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pilih lokasi pemesanan"
+                            android:textSize="13sp"
+                            android:textColor="@color/gray"
+                            android:fontFamily="@font/productsansbold"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
@@ -157,7 +233,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="80dp">
 
                 <ImageView
                     android:id="@+id/min_qty"
@@ -196,26 +272,9 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         </LinearLayout>
 
     </ScrollView>
-
-    <!-- button add to cart -->
-    <Button
-        android:id="@+id/main_service_product_add_to_cart"
-        android:text="Tambahkan - 20.000 koin"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:background="@android:color/holo_blue_light"
-        android:fontFamily="@font/productsansbold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textColor="@color/white"
-        android:layout_marginBottom="30dp"/>
 
     <!-- back button -->
     <ImageView
@@ -229,5 +288,21 @@
         android:src="@drawable/ic_arrow_thin_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <!-- button add to cart -->
+    <Button
+        android:id="@+id/main_service_product_add_to_cart"
+        android:text="Tambahkan - 20.000 koin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:fontFamily="@font/productsansbold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

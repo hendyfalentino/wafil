@@ -65,8 +65,7 @@ public class ActivityPayment extends AppCompatActivity {
         activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityPayment.this, ActivityShoppingCart.class);
-                startActivity(intentSettings);
+                finish();
             }
         });
 

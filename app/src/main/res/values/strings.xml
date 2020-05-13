@@ -7,4 +7,8 @@
 
     <!-- print punya, jang kore!   -->
     <string name="open_place_picker">Pilih Tempat Antar</string>
+
+    <string name="tanggal">Tanggal</string>
+
+    <string name="kode_transaksi">Kode Transaksi</string>
 </resources>

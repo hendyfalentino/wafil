@@ -1,238 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:orientation="vertical"
-    tools:context=".Wafil.chilyoHouze.Payment.ActivityPayment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main"
+            android:orientation="vertical"
+            tools:context=".Wafil.chilyoHouze.Payment.ActivityPayment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:id="@+id/linearLayout"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingBottom="20dp">
+                    android:layout_height="wrap_content">
 
-                        <!-- TOP BORDER -->
                         <LinearLayout
+                            android:layout_marginBottom="90dp"
+                            android:id="@+id/linearLayout"
                             android:layout_width="match_parent"
-                            android:layout_height="5dp"
-                            android:layout_marginBottom="-10dp"
-                            android:background="@color/colorPrimary" />
-
-                        <!-- HEADING -->
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/heading_payment"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="40dp"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginBottom="25dp">
-
-                                <ImageView
-                                    android:id="@+id/activity_chilyo_back"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/ic_arrow_thin_left"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintLeft_toLeftOf="parent"
-                                    />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="Payment"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="20sp"
-                                    tools:ignore="MissingConstraints"/>
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <!-- ORDER LIST -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
+                            android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:background="#6D01181D">
+                            android:paddingBottom="120dp">
 
-                                <TextView
+                                <!-- TOP BORDER -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp"
+                                    android:layout_marginBottom="-10dp"
+                                    android:background="@color/colorPrimary" />
+
+                                <!-- HEADING -->
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/heading_payment"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="15dp"
-                                    android:layout_marginTop="8dp"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="ORDER SUMMARY"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="40dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="25dp">
 
-                                <!-- <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="35dp"
-                                    android:layout_marginEnd="18dp"
-                                    android:textAlignment="textEnd"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="Edit"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="18sp"
-                                    android:layout_marginTop="-25dp" /> -->
+                                        <ImageView
+                                            android:id="@+id/activity_chilyo_back"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:src="@drawable/ic_arrow_thin_left"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            />
 
-                        </LinearLayout>
+                                        <TextView
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="Pembayaran"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="16sp"/>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                <androidx.recyclerview.widget.RecyclerView
-                                    android:id="@+id/rv_paymentItem"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    tools:listitem="@layout/payment_item"/>
-
-                        </LinearLayout>
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="20dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="Amount to Pay"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="22sp"
-                                    app:layout_constraintLeft_toLeftOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <TextView
-                                    android:id="@+id/order_amount"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="50.000 coin"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="22dp"
-                                    app:layout_constraintRight_toRightOf="parent"
-                                    tools:layout_editor_absoluteX="250dp" />
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                                <TextView
+                                <!-- ORDER LIST -->
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="8dp"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="Cancellation within 2 hours of booking time will incur a charge of 100 coins "
-                                    android:textColor="#95a5a6"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                                    android:orientation="vertical"
+                                    android:background="#6D01181D">
 
-                        </LinearLayout>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="15dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="8dp"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="DETAIL PEMBAYARAN"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
 
-                        <!-- PAYMENT METHOD -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="25dp"
-                            android:background="#6D01181D">
+                                        <!-- <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="35dp"
+                                            android:layout_marginEnd="18dp"
+                                            android:textAlignment="textEnd"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="Edit"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="18sp"
+                                            android:layout_marginTop="-25dp" /> -->
 
-                                <TextView
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/rv_paymentItem"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            tools:listitem="@layout/payment_item"/>
+
+                                </LinearLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="8dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:layout_marginStart="15dp"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="PAYMENT METHOD"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="18sp"
-                                    tools:ignore="MissingConstraints"/>
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="20dp">
 
-                        </LinearLayout>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="Amount to Pay"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="22sp"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                                        <TextView
+                                            android:id="@+id/order_amount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="50.000 coin"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="22dp"
+                                            app:layout_constraintRight_toRightOf="parent"
+                                            tools:layout_editor_absoluteX="250dp" />
 
-                                <ImageView
-                                    android:id="@+id/payment_wallet"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_marginStart="35dp"
-                                    android:src="@drawable/ic_payment"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintLeft_toLeftOf="parent"
-                                    />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                <TextView
-                                    android:id="@+id/user_coin"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="100.000 coin"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="20sp"
-                                    app:layout_constraintLeft_toLeftOf="@id/payment_wallet"
-                                    tools:ignore="MissingConstraints" />
-
-                                <ImageView
-                                    android:id="@+id/topUp_pay"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:src="@drawable/ic_topup"
-                                    android:layout_marginLeft="60dp"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/topUp_txt"
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/productsansbold"
-                                    android:text="Top Up"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="20sp"
-                                    tools:ignore="MissingConstraints" />
+                                    android:orientation="vertical"
+                                    android:layout_marginBottom="60dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginBottom="8dp"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="Cancellation within 2 hours of booking time will incur a charge of 100 coins "
+                                            android:textColor="#95a5a6"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <!-- PAYMENT METHOD -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="25dp"
+                                    android:background="#6D01181D">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="8dp"
+                                            android:layout_marginStart="15dp"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="PAYMENT METHOD"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="18sp"
+                                            tools:ignore="MissingConstraints"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/payment_wallet"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_marginStart="35dp"
+                                            android:src="@drawable/ic_payment"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/user_coin"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="100.000 coin"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="20sp"
+                                            app:layout_constraintLeft_toLeftOf="@id/payment_wallet"
+                                            tools:ignore="MissingConstraints" />
+
+                                        <ImageView
+                                            android:id="@+id/topUp_pay"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:src="@drawable/ic_topup"
+                                            android:layout_marginLeft="60dp"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/topUp_txt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/productsansbold"
+                                            android:text="Top Up"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="20sp"
+                                            tools:ignore="MissingConstraints" />
+
+                                </LinearLayout>
 
                         </LinearLayout>
 
-                </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout >
 
-                <Button
-                    android:id="@+id/pay_book_now"
-                    android:text="BAYAR"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:background="@android:color/holo_blue_light"
-                    android:fontFamily="@font/productsansbold"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="30dp"/>
+        </ScrollView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout >
+        <Button
+            android:id="@+id/pay_book_now"
+            android:text="BAYAR"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:fontFamily="@font/productsansbold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"/>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

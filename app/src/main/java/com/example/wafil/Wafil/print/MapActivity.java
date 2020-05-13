@@ -23,7 +23,7 @@ public class MapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_print_main);
 
-//        Saat tombol pilih tempat di-klik
+         // Saat tombol pilih tempat di-klik
         findViewById(R.id.open_place_picker_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +48,7 @@ public class MapActivity extends AppCompatActivity {
                 try {
                     // ambil address
                     AddressData addressData = data.getParcelableExtra(Constants.ADDRESS_INTENT);
+
                     // pass ke string
                     ((TextView) findViewById(R.id.address_data_text_view)).setText(addressData.toString());
                 } catch (Exception e) {

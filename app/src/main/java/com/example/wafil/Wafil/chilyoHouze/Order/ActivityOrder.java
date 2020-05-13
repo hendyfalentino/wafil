@@ -58,7 +58,6 @@ public class ActivityOrder extends AppCompatActivity {
         order_amount = findViewById(R.id.order_amount);
 
         getJson();
-
         elementInit();
 
         /** kembali ke menu utama **/
@@ -66,8 +65,7 @@ public class ActivityOrder extends AppCompatActivity {
         activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityOrder.this, activity_chilyo_main.class);
-                startActivity(intentSettings);
+                finish();
             }
         });
 

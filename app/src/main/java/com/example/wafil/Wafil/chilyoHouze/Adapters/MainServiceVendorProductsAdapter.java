@@ -43,7 +43,7 @@ public class MainServiceVendorProductsAdapter extends RecyclerView.Adapter<MainS
         String userBalance = Support.rupiahFormat(v.getProduct_price()) + " koin";
         holder.main_service_group_price.setText(userBalance);
 
-        holder.main_service_group_name.setOnClickListener(new View.OnClickListener() {
+        holder.main_service_dashboard_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), ProductDetail.class);

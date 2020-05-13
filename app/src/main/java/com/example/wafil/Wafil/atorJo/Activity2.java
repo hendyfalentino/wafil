@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -53,10 +54,9 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intentSetting = new Intent(Activity2.this, ActivityShoppingCart.class);
-            }
+                 }
 
-    });
-
+        });
     }
 
     private void startActivities(Intent intentSetting) {

@@ -8,13 +8,17 @@
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
     android:paddingTop="80dp"
+    android:background="@drawable/login_bg"
     tools:context=".Wafil.LoginActivity">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Login"
+        android:textColor="@color/quantum_orange400"
+        android:fontFamily="@font/productsansbold"
         android:textSize="60sp" />
 
     <EditText
@@ -24,6 +28,9 @@
         android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="Username"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -34,6 +41,9 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="Password"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textPassword" />
 
     <Button
@@ -41,6 +51,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/productsansbold"
+        android:background="@color/quantum_orange200"
+        android:textSize="18sp"
         android:text="login" />
 
     <TextView
@@ -50,6 +63,9 @@
         android:layout_marginTop="80dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
+        android:fontFamily="@font/productsansregular"
+        android:textSize="18sp"
+        android:textColor="@color/quantum_orange800"
         android:text="Register" />
 
 </LinearLayout>

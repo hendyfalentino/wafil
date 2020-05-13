@@ -8,6 +8,7 @@
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
     android:paddingTop="80dp"
+    android:background="@drawable/regis_bg"
     tools:context=".Wafil.RegisterActivity">
 
     <TextView
@@ -16,6 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Register"
+        android:textColor="@color/quantum_orange"
+        android:fontFamily="@font/productsansbold"
         android:textSize="60sp" />
 
     <EditText
@@ -25,6 +28,9 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="First Name"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textPersonName"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -35,25 +41,32 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Username"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-    android:id="@+id/user_password"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:ems="10"
-    android:hint="Password"
-    android:inputType="textPassword"
-    app:errorEnabled="true"
-    app:passwordToggleEnabled="true"/>
+        android:id="@+id/user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textColor="@color/black"
         android:text=" Min. 8 Characters with 1 Number and 1 Upper Case" />
 
     <EditText
@@ -63,6 +76,9 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Confirm Password"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -73,6 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_gravity="center_horizontal"
+        android:background="@color/quantum_orange200"
+        android:fontFamily="@font/productsansbold"
+        android:textSize="18sp"
         android:text="register" />
 
     <TextView
@@ -82,6 +101,9 @@
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
+        android:fontFamily="@font/productsansregular"
+        android:textColor="@color/quantum_pink"
+        android:textSize="18sp"
         android:text="Login" />
 
 </LinearLayout>

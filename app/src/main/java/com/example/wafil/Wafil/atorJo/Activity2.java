@@ -4,61 +4,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wafil.R;
 
 public class Activity2 extends AppCompatActivity {
-    private Button buttonRumah;
-    private Button buttonKantor;
-    private Button buttonPengemas;
-    //Oke ken
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
 
+        elementInit();
+
         //getSupportActionBar().setTitle("atorJo");
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
-        buttonRumah = (Button) findViewById(R.id.buttonRumah);
-        buttonRumah.setOnClickListener(new View.OnClickListener() {
+    private void elementInit() {
+
+        ImageView back = findViewById(R.id.activity_atorjo_back);
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                setButtonRumah();
+            public void onClick(View v) {
+                finish();
             }
         });
 
-        buttonKantor = (Button) findViewById(R.id.buttonKantor);
-        buttonKantor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setButtonKantor();
-            }
-        });
-
-        buttonPengemas = (Button) findViewById(R.id.buttonPengemas);
-        buttonPengemas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setButtonPengemas();
-            }
-        });
-    }
-
-    public void setButtonRumah(){
-        Intent intent = new Intent(this, bersihRumah.class);
-        startActivity(intent);
-    }
-
-    public void setButtonKantor(){
-        Intent intent = new Intent(this, bersihKantor.class);
-        startActivity(intent);
-    }
-
-    public void setButtonPengemas(){
-        Intent intent = new Intent(this, pengemasBarang.class);
-        startActivity(intent);
     }
 }

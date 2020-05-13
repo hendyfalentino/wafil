@@ -1,143 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:background="@color/lightgray">
+    android:background="@color/backgroundcolor">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".Activity2"
-        android:weightSum="10"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        tools:context=".Wafil.chilyoHouze.activity_chilyo_main">
 
-        <GridLayout
-            android:columnCount="1"
-            android:rowCount="2"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:layout_weight="8"
+        <!-- top navigation -->
+        <LinearLayout
+            android:id="@+id/activity_chilyo_header"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:padding="20sp">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#FFFFFF"
+            android:elevation="20dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="8dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
 
-                <Button
-                    android:id="@+id/buttonRumah"
-                    android:text="Bersih Rumah"
-                    android:textSize="20sp"
-                    android:textColor="#1E1851"
-                    android:background="@drawable/custom_button"
-                    android:textAllCaps="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/activity_atorjo_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_thin_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
 
+                <ImageView
+                    android:id="@+id/activity_chilyo_history"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="25dp"
+                    android:src="@drawable/ic_to_do"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/activity_chilyo_cart"
+                    />
+
+                <ImageView
+                    android:id="@+id/activity_chilyo_cart"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_shopping_bag"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <!-- type of service -->
+        <LinearLayout
+            android:id="@+id/services_chooser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/activity_chilyo_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:text="Dirumah aja, tapi bisa perawatan?"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <!-- layanan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Layanan"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/productsansbold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Siap-siap santai dengan kami :)"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/productsansregular"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- tombol make up -->
                 <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:id="@+id/acitvity_chilyo_make_up_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintWidth_percent="0.25">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:src="@drawable/logo_bersih_rumah" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Make Up"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/productsansbold"
+                        android:textSize="13sp"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#000"/>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="8dp">
-
-                <Button
-                    android:id="@+id/buttonKantor"
-                    android:text="Bersih Kantor"
-                    android:textSize="20sp"
-                    android:textColor="#1E1851"
-                    android:background="@drawable/custom_button"
-                    android:textAllCaps="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
+                <!-- tombol self nails -->
                 <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:id="@+id/acitvity_chilyo_self_nail_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_make_up_button"
+                    app:layout_constraintWidth_percent="0.25">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:src="@drawable/logo_bersih_kantor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Self Nail"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/productsansbold"
+                        android:textSize="13sp"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#000"/>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                app:cardElevation="8dp"
-                app:cardCornerRadius="8dp">
-
-                <Button
-                    android:id="@+id/buttonPengemas"
-                    android:text="Pengemas Barang"
-                    android:textSize="20sp"
-                    android:textColor="#1E1851"
-                    android:background="@drawable/custom_button"
-                    android:textAllCaps="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
+                <!-- tombol spa -->
                 <LinearLayout
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
+                    android:id="@+id/acitvity_chilyo_spa_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_self_nail_button"
+                    app:layout_constraintWidth_percent="0.25">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:src="@drawable/logo_pengemas" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Spa"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/productsansbold"
+                        android:textSize="13sp"
+                        android:layout_marginTop="7dp"
+                        android:textColor="#000"/>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </GridLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        app:itemBackground="@color/backgroundcolor"
-        app:itemIconTint="@color/colorPrimaryDark"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:menu="@menu/buttom_nav_in"
-        android:layout_alignParentLeft="true">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-</RelativeLayout>
+</ScrollView>
 

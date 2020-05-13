@@ -49,11 +49,11 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.5.0'
 
     // print pe dependencies, jang kore!
-        // fitur mapping
-            implementation 'com.sucho:placepicker:1.1.1'
-            implementation 'com.google.android.gms:play-services-maps:17.0.0'
-            implementation 'com.google.android.material:material:1.1.0'
-            implementation 'com.google.android.libraries.places:places:2.2.0'
+    // fitur mapping
+    implementation 'com.sucho:placepicker:1.1.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.libraries.places:places:2.2.0'
     implementation "androidx.core:core-ktx:+"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

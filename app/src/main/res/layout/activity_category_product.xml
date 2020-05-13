@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Wafil.wafil.CategoryProductActivity"
-    android:background="@drawable/wafil_bg">
+    android:background="@drawable/galon_bg">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_product_recycler_view"

@@ -7,7 +7,7 @@
     android:weightSum="10"
     android:layout_marginBottom="60dp"
     android:padding="10dp"
-    android:background="@color/lightgray">
+    android:background="@color/quantum_orange400">
 
     <RelativeLayout
         android:id="@+id/Relative"
@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="MENU"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/white"
             android:textSize="34sp"
             android:textStyle="bold"/>
 
@@ -51,11 +51,7 @@
                 android:columnOrderPreserved="false"
                 android:padding="14sp">
 
-                <!-- Row 1 -->
-
-                <!-- Colum 1 -->
-
-                <!-- Colum 2 -->
+                <!-- MENU WAFIL -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -69,18 +65,29 @@
                     app:cardCornerRadius="8dp"
                     app:cardElevation="8dp">
 
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
                     <Button
                         android:id="@+id/btn_wafil"
-                        android:text="Air Galon"
-                        android:textSize="24sp"
-                        android:textColor="#1E1851"
-                        android:background="@drawable/custom_button"
+                        android:background="@drawable/bg_main"
+                        android:text="AIR GALON"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
                         android:textAllCaps="false"
+                        android:fontFamily="@font/productsansbold"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
 
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
+                <!-- MENU PRINT -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -101,20 +108,18 @@
 
                         <Button
                             android:id="@+id/btn_print"
+                            android:background="@drawable/bg_main"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/custom_button"
                             android:text="PR!NT"
+                            android:fontFamily="@font/productsansbold"
                             android:textAllCaps="false"
-                            android:textColor="@color/colorPrimaryDark"
                             android:textSize="26sp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- Row 2 -->
-
-                <!-- Colum 1 -->
+                <!-- MENU CHILYO HOUZE -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -125,26 +130,30 @@
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
                     app:cardCornerRadius="8dp">
+
                     <LinearLayout
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:layout_margin="16dp"
                         android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
+
                         <Button
                             android:id="@+id/btn_chilyo"
-                            android:text="Salon"
-                            android:textSize="24sp"
-                            android:textColor="#1E1851"
-                            android:background="@drawable/custom_button"
+                            android:background="@drawable/bg_main"
+                            android:text="MAKE UP"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/productsansbold"
                             android:textAllCaps="false"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- Colum 2 -->
+                <!-- MENU ATORJO -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -156,30 +165,29 @@
                     app:cardElevation="8dp"
                     app:cardCornerRadius="8dp">
 
+                    <LinearLayout
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
                     <Button
                         android:id="@+id/btn_atorjo"
-                        android:text="Pembersih"
-                        android:textSize="24sp"
-                        android:textColor="#1E1851"
-                        android:background="@drawable/custom_button"
+                        android:background="@drawable/bg_main"
+                        android:text="PEMBERSIH"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/productsansbold"
                         android:textAllCaps="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
 
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- Row 3 -->
-
-                <!-- Colum 1 -->
+                <!-- MENU TUKANGKU -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -190,26 +198,25 @@
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
                     app:cardCornerRadius="8dp">
+
                     <LinearLayout
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:layout_margin="16dp"
                         android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:src="@drawable/ic_attach_file_black_24dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="Me"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal" />
+
+                        <Button
+                            android:id="@+id/btn_tukangku"
+                            android:background="@drawable/bg_main"
+                            android:text="TUKANG LEDENG"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/productsansbold"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -225,6 +232,7 @@
                     android:layout_marginRight="16dp"
                     app:cardElevation="8dp"
                     app:cardCornerRadius="8dp">
+
                     <LinearLayout
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:layout_margin="16dp"

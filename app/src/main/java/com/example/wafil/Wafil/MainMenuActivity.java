@@ -30,7 +30,7 @@ public class MainMenuActivity extends Fragment {
         btn_wafil = v.findViewById(R.id.btn_wafil);
         btn_print = v.findViewById(R.id.btn_print);
         btn_chilyo = v.findViewById(R.id.btn_chilyo);
-        button = v.findViewById(R.id.button);
+        button = v.findViewById(R.id.btn_atorjo);
 
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override

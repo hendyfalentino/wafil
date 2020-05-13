@@ -157,7 +157,7 @@
                     app:cardCornerRadius="8dp">
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btn_atorjo"
                         android:text="Pembersih"
                         android:textSize="24sp"
                         android:textColor="#1E1851"

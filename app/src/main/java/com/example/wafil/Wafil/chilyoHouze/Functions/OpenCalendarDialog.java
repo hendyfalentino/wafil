@@ -33,7 +33,7 @@ public class OpenCalendarDialog {
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-                String myFormat = "dd/MM/yy"; //In which you need put here
+                String myFormat = "yyyy-MM-dd"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
                 ondateset.onSuccess(sdf.format(myCalendar.getTime()));
             }

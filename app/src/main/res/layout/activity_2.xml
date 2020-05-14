@@ -137,7 +137,7 @@
 
                 <!-- tombol self nails -->
                 <LinearLayout
-                    android:id="@+id/acitvity_chilyo_self_nail_button"
+                    android:id="@+id/activity_atorjo_bersihKantor"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -146,6 +146,7 @@
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
+                        android:id="@+id/activity_atorjo_bersih_kantor_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/logo_bersih_kantor" />
@@ -169,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_self_nail_button"
+                    app:layout_constraintLeft_toRightOf="@id/activity_atorjo_bersihKantor"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView

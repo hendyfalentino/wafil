@@ -54,8 +54,27 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intentSetting = new Intent(Activity2.this, ActivityShoppingCart.class);
-                 }
+                startActivities(intentSetting);
+            }
 
+        });
+
+        ImageView rumah = findViewById(R.id.activity_atorjo_bersih_rmh_button);
+        rumah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity2.this, bersihRumah.class);
+                startActivities(intent);
+            }
+        });
+
+        ImageView kantor = findViewById(R.id.activity_atorjo_bersih_kantor_button);
+        kantor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity2.this, bersihKantor.class);
+                startActivities(intent);
+            }
         });
     }
 

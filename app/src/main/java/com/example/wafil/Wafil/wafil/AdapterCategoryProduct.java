@@ -59,7 +59,7 @@ public class AdapterCategoryProduct extends RecyclerView.Adapter<AdapterCategory
             }
         }));
         String test = category_product.get(position).getName_category_product();
-        String img = "http://carexports.uk/Admin/assets/img/" + test + ".png";
+        String img = "http://carexports.uk/Vendor/assets/img/" + test + ".png";
         Picasso.with(context).load(img).into(holder.imageView2);
     }
 

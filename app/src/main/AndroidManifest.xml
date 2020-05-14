@@ -12,6 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        
+        <activity android:name=".Wafil.chefCook.ChefMainActivity"/>
+        <activity android:name=".Wafil.chefCook.AdminDashboard"/>
+        <activity android:name=".Wafil.chefCook.Admin.AdminDashUsers"/>
+        <activity android:name=".Wafil.chefCook.Landing"/>
+        <activity android:name=".Wafil.chefCook.Page.Account"/>
+        <activity android:name=".Wafil.chefCook.Page.Account_profile"/>
+        <activity android:name=".Wafil.chefCook.Page.Beranda"/>
+        <activity android:name=".Wafil.chefCook.Page.Order"/>
+        
+        
         <activity android:name=".Wafil.giziTest.GiziTestMainActivity"></activity>
         <activity android:name=".Wafil.basBangunan.BasBangunanMainActivity" />
         <activity android:name=".Wafil.aMarket.HomeAdmin"/>

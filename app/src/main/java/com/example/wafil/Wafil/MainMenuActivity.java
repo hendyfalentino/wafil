@@ -15,16 +15,15 @@ import com.example.wafil.R;
 import com.example.wafil.Wafil.aMarket.HomeAdmin;
 import com.example.wafil.Wafil.atorJo.Activity2;
 import com.example.wafil.Wafil.basBangunan.BasBangunanMainActivity;
+import com.example.wafil.Wafil.chefCook.ChefMainActivity;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
-import com.example.wafil.Wafil.giziTest.GiziTestMainActivity;
 import com.example.wafil.Wafil.giziTest.SignUp;
 import com.example.wafil.Wafil.print.MapActivity;
-import com.example.wafil.Wafil.wafil.CategoryProductActivity;
 import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
 
-    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest, btn_market;
+    Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest, btn_market, btn_chefcook;
 
     @Nullable
     @Override
@@ -38,6 +37,7 @@ public class MainMenuActivity extends Fragment {
         btn_basbangunan = v.findViewById(R.id.btn_basbangunan);
         btn_gizitest = v.findViewById(R.id.btn_gizitest);
         btn_market = v.findViewById(R.id.btn_market);
+        btn_chefcook = v.findViewById(R.id.btn_chefcook);
 
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +88,14 @@ public class MainMenuActivity extends Fragment {
                 startActivity(intent);
             }
         });
+        btn_chefcook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChefMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return v;
     }
 }

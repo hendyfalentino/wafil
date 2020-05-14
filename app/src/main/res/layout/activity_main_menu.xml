@@ -337,21 +337,18 @@
                         android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:src="@drawable/ic_attach_file_black_24dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:contentDescription="TODO" />
-                        <TextView
-                            android:text="Me"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal" />
+
+                        <Button
+                            android:id="@+id/btn_iwashcar"
+                            android:background="@drawable/bg_main"
+                            android:text="CUCI MOBIL"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/productsansbold"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -372,21 +369,18 @@
                         android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
-                        <ImageView
-                            android:src="@drawable/ic_attach_file_black_24dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:contentDescription="TODO" />
-                        <TextView
-                            android:text="Me"
-                            android:textAlignment="center"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal" />
+
+                        <Button
+                            android:id="@+id/btn_chefcook"
+                            android:background="@drawable/bg_main"
+                            android:text="MASAK"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/productsansbold"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>

@@ -1,4 +1,41 @@
 <resources>
+    //Regist
+    <string name="login">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama_user">Nama User</string>
+    <string name="email">Email</string>
+    <string name="telepon">Nomor telepon</string>
+    <string name="kata_sandi">Kata Sandi</string>
+
+    //nav
+    <string name="string_nav_home">Beranda</string>
+    <string name="string_nav_order">Pesanan</string>
+    <string name="string_nav_account">Akun</string>
+
+    //Account
+    <string name="accout_nama">Nama kamu</string>
+    <string name="accout_nomor">08xx-xxxx-1234</string>
+    <string name="accout_email">nama@email.com</string>
+    <string name="accout_tgl_tempat">lokasi</string>
+    <string name="accout_tgl_hh">01</string>
+    <string name="accout_tgl_mm">April</string>
+    <string name="accout_tgl_yyyy">2020</string>
+
+    //Admin
+    <string name="dashboard">Dashboard</string>
+    <string name="card1">Akun</string>
+    <string name="card2">Feedback</string>
+    <string name="card3">Order</string>
+    <string name="card4">Promo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_account_profile">Account_profile</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+
+
+
     <string name="app_name">wafil</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -48,7 +85,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="email">Nama</string>
     <string name="date_of_birth">Tanggal Lahir</string>
     <string name="gender">Jenis Kelamin</string>
     <string name="male">Laki-Laki</string>

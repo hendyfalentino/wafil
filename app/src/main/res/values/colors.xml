@@ -15,6 +15,9 @@
     <color name="orange">#FFA500 </color>
     <color name="kuning">#ffde59 </color>
 
+    <color name="White">#fff</color>
+    <color name="Orange">#FA5700</color>
+    <color name="Blue">#00A3FA</color>
 
     <color name="grey">#c3c3c3</color>
     <color name="colorAppBackground">#ffffff</color>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu">
+
+    <activity
+        android:name="com.example.wafil.Wafil.chefCook.Page.Account"
+        android:label="Profile"
+        tools:layout="@layout/activity_account" />
+    <activity
+        android:name="com.example.wafil.Wafil.chefCook.Page.Beranda"
+        android:label="Beranda"
+        tools:layout="@layout/activity_beranda" />
+    <activity
+        android:name="com.example.wafil.Wafil.chefCook.Page.Order"
+        android:label="Order"
+        tools:layout="@layout/activity_order" />
+</navigation>

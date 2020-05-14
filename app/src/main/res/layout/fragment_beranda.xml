@@ -116,7 +116,7 @@
             android:layout_width="25dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_panahkiri_foreground"/>
+            android:src="@drawable/ic_arrow_thin_left"/>
 
     <HorizontalScrollView
         android:layout_width="300sp"
@@ -201,7 +201,7 @@
             android:layout_width="25dp"
             android:layout_height="70dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_panahkiri_foreground"/>
+            android:src="@drawable/ic_arrow_thin_left"/>
 
         <HorizontalScrollView
             android:layout_width="300sp"

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Wafil.chefCook.Page.Account">
+
+    <RelativeLayout
+        android:id="@+id/rlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8A1F1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagehead"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/chefcook_italic" />
+
+        <TextView
+            android:id="@+id/txtviewhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/imagehead"
+            android:layout_toStartOf="@id/bttini"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bttini"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlayout1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_viewakun">
+
+            <ImageView
+                android:id="@+id/imageProfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:padding="8dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtnamauser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageProfil"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/imageProfil"
+                android:text="@string/nama_user"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtnomor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtnamauser"
+                android:layout_alignStart="@id/txtnamauser"
+                android:layout_marginTop="16dp"
+                android:text="@string/accout_nomor"
+                android:textSize="16sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtnomor"
+                android:layout_alignStart="@id/txtnamauser"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:numStars="5"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardaccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_viewcard"
+                app:cardBackgroundColor="#6200EA"
+                app:cardCornerRadius="20dp"
+                app:cardUseCompatPadding="true"
+                android:padding="16dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_account_circle"
+                    android:layout_gravity="center"
+                />
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

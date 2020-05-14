@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Wafil.chefCook.Page.Beranda">
+
+    <RelativeLayout
+        android:id="@+id/rlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8A1F1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/chefcook_italic" />
+
+        <TextView
+            android:id="@+id/txtviewhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/bttini"
+            android:layout_toEndOf="@id/imageView2"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bttini"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_toStartOf="@id/imageView2"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/White" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/string_nav_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlayout1" />
+
+    <Button
+        android:id="@+id/btOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/string_nav_order"
+        app:layout_constraintStart_toEndOf="@+id/btHome"
+        app:layout_constraintTop_toBottomOf="@+id/rlayout1" />
+
+    <Button
+        android:id="@+id/btAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/string_nav_account"
+        app:layout_constraintStart_toEndOf="@+id/btOrder"
+        app:layout_constraintTop_toBottomOf="@+id/rlayout1" />
+
+    <Button
+        android:id="@+id/btAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Admin"
+        app:layout_constraintTop_toBottomOf="@id/btHome"
+        app:layout_constraintStart_toStartOf="@id/btHome"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

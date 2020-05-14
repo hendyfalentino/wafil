@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,9 +18,11 @@ import com.example.wafil.Wafil.API.ApiClient;
 import com.example.wafil.Wafil.API.ApiInterface;
 import com.example.wafil.Wafil.API.SessionManager;
 import com.example.wafil.Wafil.chilyoHouze.Adapters.PaymentGetItemAdapter;
+import com.example.wafil.Wafil.chilyoHouze.Model.ErrorClass;
 import com.example.wafil.Wafil.chilyoHouze.Model.PaymentItem;
 import com.example.wafil.Wafil.chilyoHouze.Order.ActivityOrder;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
+import com.example.wafil.Wafil.chilyoHouze.Support.CustomProgressBar;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
@@ -70,12 +73,13 @@ public class ActivityPayment extends AppCompatActivity {
         });
 
         /** tombol Bayar **/
-        Button pay_book_now = findViewById(R.id.pay_book_now);
-        pay_book_now.setOnClickListener(new View.OnClickListener() {
+        Button pay_book = findViewById(R.id.pay_book);
+        pay_book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityPayment.this, ActivityOrder.class);
-                startActivity(intentSettings);
+                PaymentError();
+                //intentSettings = new Intent(ActivityPayment.this, ActivityOrder.class);
+                //startActivity(intentSettings);
             }
         });
 
@@ -93,8 +97,38 @@ public class ActivityPayment extends AppCompatActivity {
         topUp_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSettings = new Intent(ActivityPayment.this, activity_chilyo_topup.class);
-                startActivity(intentSettings);
+                //intentSettings = new Intent(ActivityPayment.this, activity_chilyo_topup.class);
+                //startActivity(intentSettings);
+            }
+        });
+    }
+
+    private void PaymentError(){
+        CustomProgressBar bar_ = new CustomProgressBar();
+        bar_.show(this, "Mohon Tunggu");
+        ApiInterface service = ApiClient.getRetrofitInstance().create(ApiInterface.class);
+        Call<ErrorClass> call = service.OrderPayment(getUserId); //200513005 ?
+        call.enqueue(new Callback<ErrorClass>() {
+            @Override
+            public void onResponse(Call<ErrorClass> call, Response<ErrorClass> response) {
+                if(response.body() != null) {
+                    String error_msg_= response.body().getKode();
+                    if(error_msg_.equals("USER_BALANCE_NOT_ENOUGH")){
+                        Toast.makeText(ActivityPayment.this, "Balance Not Enough!"+toString(), Toast.LENGTH_SHORT).show();
+                    }
+                    else if(error_msg_.equals("PAYMENT_COMPLETED")){
+                        Toast.makeText(ActivityPayment.this, "Paid!"+toString(), Toast.LENGTH_SHORT).show();
+                    }
+                    Log.d("GetData", response.body().getKode());
+                }
+                // coba tes jo dlu
+                /// kse kosong dlutabel shopping cart OKE
+                bar_.getDialog().dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<ErrorClass> call, Throwable t) {
+                Log.d("GetData", t.toString());
             }
         });
     }

@@ -92,6 +92,12 @@ public class ActivityShoppingCart extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getJson(id_user);
+    }
+
     private void getJson(String id_user){
         ApiInterface groupShopping = ApiClient.getRetrofitInstance().create(ApiInterface.class);
         Call<List<ShoppingCartGroup>> call = groupShopping.getAllShoppingCart(id_user);

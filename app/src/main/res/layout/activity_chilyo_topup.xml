@@ -340,7 +340,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/pay_book_now"
+        android:id="@+id/pay_book_topup"
         android:text="TOP UP NOW"
         android:layout_width="150dp"
         android:layout_height="50dp"

@@ -87,4 +87,9 @@ public interface ApiInterface {
             @Query("id_shopcart") String id_shopcart
     );
 
+    @GET("order/createNewOrder.php")
+    Call<ErrorClass> OrderPayment(
+            @Query("user_id") String user_id
+    );
+
 }

@@ -32,7 +32,6 @@ public class SignUpGoal extends AppCompatActivity {
         /* Listener submit */
         Button buttonSubmit = (Button)findViewById(R.id.buttonSubmit);
         buttonSubmit.setOnClickListener(new View.OnClickListener(){
-            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v){
                 signUpGoalSubmit();

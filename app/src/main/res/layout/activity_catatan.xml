@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".Wafil.babySitter.CatatanActivity">
+
+    <Button
+        android:onClick="Backhome"
+        android:layout_width="39dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/backward_arrow" />
+
+
+    <LinearLayout
+        android:id="@+id/linear123"
+        android:layout_width="294dp"
+        android:layout_height="436dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/kotaklonjong"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:text="Buah Hati"
+            android:textColor="@color/brown" />
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp"
+            android:text="Umur"
+            android:textColor="@color/brown" />
+
+        <EditText
+            android:id="@+id/umur"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Alamat Rumah"
+            android:textColor="@color/brown" />
+
+        <EditText
+            android:id="@+id/alamat_rumah"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Catatan Khusus"
+            android:textColor="@color/brown" />
+
+        <EditText
+            android:id="@+id/catatan_khusus"
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="10dp"
+            android:hint="contoh : Alergi Nasi"
+            android:textSize="14dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/lonjongcklt"
+            android:onClick="Cari"
+            android:text="CARI PENGASUH"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="422dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navigationbar"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/feednon"
+            android:onClick="Home" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/messages"
+            android:onClick="Ongoing" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/time"
+            android:onClick="History" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/profile"
+            android:onClick="Profile" />
+    </LinearLayout>
+
+</RelativeLayout>

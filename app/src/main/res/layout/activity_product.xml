@@ -22,7 +22,6 @@
         android:layout_below="@+id/search"
         android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/product"/>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

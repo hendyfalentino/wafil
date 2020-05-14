@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".Wafil.babySitter.Daftarbs1Activity">
+
+    <Button
+        android:id="@+id/btnlog"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backward_arrow"
+        android:onClick="Login" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kotaklonjong"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Akun Pengasuh"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="id"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Nama Pengasuh"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Email"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Kata Sandi"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/brown"
+            android:hint="Alamat" />
+
+        <EditText
+            android:id="@+id/gender"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/brown"
+            android:hint="jenis kelamin" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="No Handphone"
+            android:textColor="@color/brown"/>
+
+        <EditText
+            android:id="@+id/babysitter_type_id"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="babysitter type id"
+            android:textColor="@color/brown"/>
+
+
+        <EditText
+            android:id="@+id/file_cv"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="file cv"
+            android:textColor="@color/brown"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Masukan Foto"
+            android:textColor="@color/brown"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="102dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/kotak2" />
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="84dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/lonjongcklt"
+                android:text="pilih gambar"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:onClick="Register"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/daftar"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

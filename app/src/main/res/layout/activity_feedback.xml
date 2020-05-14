@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".Wafil.babySitter.FeedbackActivity">
+
+    <Button
+        android:onClick="Backhome"
+        android:layout_width="39dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/backward_arrow" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/kotaklonjong"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="175dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bbystr" />
+
+        <TextView
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Zendaya"
+            android:textColor="@color/brown"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/brown"
+            android:text="zendaya@gmail.com"
+            android:textAlignment="center" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Feedback pengguna :"
+            android:textColor="@color/brown"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/kotak" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/lonjongcklt"
+            android:text="Submit Feedback"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="422dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navigationbar"
+        android:orientation="horizontal" >
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/feednon"
+            android:onClick="Home" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/messages"
+            android:onClick="Ongoing" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/timeon"
+            android:onClick="History" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="43dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/profile"
+            android:onClick="Profile" />
+    </LinearLayout>
+
+</RelativeLayout>

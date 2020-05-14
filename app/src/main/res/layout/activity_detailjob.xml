@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/pink"
+    android:layout_height="match_parent"
+    tools:context=".Wafil.babySitter.DetailjobActivity">
+
+    <Button
+        android:onClick="Beranda"
+        android:layout_width="39dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/backward_arrow" />
+
+    <LinearLayout
+        android:id="@+id/liner2"
+        android:layout_width="wrap_content"
+        android:layout_height="342dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/kotaklonjong"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="365dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="149dp"
+                android:layout_height="135dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/prflpctr" />
+
+            <TextView
+                android:id="@+id/namae"
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="20dp"
+                android:text="Nama Orangtua = Gabriel"
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="183dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namae"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="5dp"
+                android:text="Nama Anak = Danang"
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="122dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="117dp"
+                android:layout_gravity="center"
+                android:text="Keterangan = mencari pengasuh dengan usia minimal 25 tahun dengan pengalaman kerja minimal 1 tahun. anak bernama danang dan tidak memiliki alergi."
+                android:textColor="@color/brown"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/liner2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/lonjongcklt"
+        android:text="TOLAK"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/liner2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="135dp"
+        android:background="@drawable/lonjongcklt"
+        android:text="TERIMA"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

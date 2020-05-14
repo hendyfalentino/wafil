@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        
+        <activity android:name=".Wafil.bengkel.BengkelMainActivity"/>
         <activity android:name=".Wafil.chefCook.ChefMainActivity"/>
         <activity android:name=".Wafil.chefCook.AdminDashboard"/>
         <activity android:name=".Wafil.chefCook.Admin.AdminDashUsers"/>
@@ -92,6 +92,27 @@
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />
         <activity android:name=".Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart" />
+        <activity android:name=".Wafil.babySitter.Daftarbs1Activity" />
+        <activity android:name=".Wafil.babySitter.AdminuserActivity" />
+        <activity android:name=".Wafil.babySitter.BabyLoginActivity" />
+        <activity android:name=".Wafil.babySitter.BerandabbsActivity" />
+        <activity android:name=".Wafil.babySitter.CatatanActivity" />
+        <activity android:name=".Wafil.babySitter.DaftarActivity" />
+        <activity android:name=".Wafil.babySitter.DetailActivity" />
+        <activity android:name=".Wafil.babySitter.DaftarpekerjaanActivity" />
+        <activity android:name=".Wafil.babySitter.DetailjobActivity" />
+        <activity android:name=".Wafil.babySitter.EditActivity" />
+        <activity android:name=".Wafil.babySitter.FeedbackActivity" />
+        <activity android:name=".Wafil.babySitter.FinishActivity" />
+        <activity android:name=".Wafil.babySitter.HargaActivity" />
+        <activity android:name=".Wafil.babySitter.HomeActivity" />
+        <activity android:name=".Wafil.babySitter.LoginadminActivity" />
+        <activity android:name=".Wafil.babySitter.LoginbbsActivity" />
+        <activity android:name=".Wafil.babySitter.PesananActivity" />
+        <activity android:name=".Wafil.babySitter.ProfileActivity" />
+        <activity android:name=".Wafil.babySitter.RecyclerviewActivity" />
+        <activity android:name=".Wafil.babySitter.RiwayatActivity" />
+        <activity android:name=".Wafil.babySitter.UserActivity" />
     </application>
 
 </manifest>

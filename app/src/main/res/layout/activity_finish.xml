@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    tools:context=".Wafil.babySitter.FinishActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="296dp"
+            android:layout_height="258dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/checklist"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="67dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Selamat Transaksi anda berhasil ! pengasuh akan datang dalam 30 menit"
+            android:textAlignment="center"
+            android:textColor="@color/brown"
+            android:textSize="24dp" />
+
+        <Button
+            android:onClick="Backhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/lonjongcklt"
+            android:text="Kembali ke beranda"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

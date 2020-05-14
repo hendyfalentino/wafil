@@ -12,39 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Wafil.bengkel.BengkelMainActivity"/>
-        <activity android:name=".Wafil.chefCook.ChefMainActivity"/>
-        <activity android:name=".Wafil.chefCook.AdminDashboard"/>
-        <activity android:name=".Wafil.chefCook.Admin.AdminDashUsers"/>
-        <activity android:name=".Wafil.chefCook.Landing"/>
-        <activity android:name=".Wafil.chefCook.Page.Account"/>
-        <activity android:name=".Wafil.chefCook.Page.Account_profile"/>
-        <activity android:name=".Wafil.chefCook.Page.Beranda"/>
-        <activity android:name=".Wafil.chefCook.Page.Order"/>
-        
-        
-        <activity android:name=".Wafil.giziTest.GiziTestMainActivity"></activity>
+        <activity android:name=".Wafil.atorJo.atorjoHistory"></activity>
+        <activity android:name=".Wafil.bengkel.BengkelMainActivity" />
+        <activity android:name=".Wafil.chefCook.ChefMainActivity" />
+        <activity android:name=".Wafil.chefCook.AdminDashboard" />
+        <activity android:name=".Wafil.chefCook.Admin.AdminDashUsers" />
+        <activity android:name=".Wafil.chefCook.Landing" />
+        <activity android:name=".Wafil.chefCook.Page.Account" />
+        <activity android:name=".Wafil.chefCook.Page.Account_profile" />
+        <activity android:name=".Wafil.chefCook.Page.Beranda" />
+        <activity android:name=".Wafil.chefCook.Page.Order" />
+        <activity android:name=".Wafil.giziTest.GiziTestMainActivity" />
         <activity android:name=".Wafil.basBangunan.BasBangunanMainActivity" />
-        <activity android:name=".Wafil.aMarket.HomeAdmin"/>
-        <activity android:name=".Wafil.aMarket.TambahBarang"/>
-        <activity android:name=".Wafil.aMarket.KeluarBarang"/>
-        <activity android:name=".Wafil.aMarket.LihatBarang"/>
-        <activity android:name=".Wafil.aMarket.LoginActivity"/>
-        <activity android:name=".Wafil.aMarket.MainActivity"/>
-        <activity android:name=".Wafil.aMarket.SMS"/>
-        <activity android:name=".Wafil.aMarket.UbahBarang"/>
-        <!-- Google Maps API Key -->
+        <activity android:name=".Wafil.aMarket.HomeAdmin" />
+        <activity android:name=".Wafil.aMarket.TambahBarang" />
+        <activity android:name=".Wafil.aMarket.KeluarBarang" />
+        <activity android:name=".Wafil.aMarket.LihatBarang" />
+        <activity android:name=".Wafil.aMarket.LoginActivity" />
+        <activity android:name=".Wafil.aMarket.MainActivity" />
+        <activity android:name=".Wafil.aMarket.SMS" />
+        <activity android:name=".Wafil.aMarket.UbahBarang" /> <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U"/>
+            android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U" />
 
-        <activity android:name=".Wafil.wafil.ServiceTypeActivity"></activity>
+        <activity android:name=".Wafil.wafil.ServiceTypeActivity" />
         <activity android:name=".Wafil.wafil.ProductActivity" />
         <activity android:name=".Wafil.MenuActivity" />
-        <activity android:name=".Wafil.giziTest.SignUp"/>
-        <activity android:name=".Wafil.giziTest.SignUpGoal"/>
-        <activity android:name=".Wafil.giziTest.FragmentActivity"/>
-
+        <activity android:name=".Wafil.giziTest.SignUp" />
+        <activity android:name=".Wafil.giziTest.SignUpGoal" />
+        <activity android:name=".Wafil.giziTest.FragmentActivity" />
         <activity
             android:name=".Wafil.atorJo.Activity2"
             android:parentActivityName=".Wafil.MenuActivity" />
@@ -88,8 +85,8 @@
         <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail" />
         <activity android:name=".Wafil.print.MapActivity" />
         <activity android:name=".Wafil.print.PlacePickerActivity" />
-        <activity android:name=".Wafil.print.activity_print_main"/>
-        <activity android:name=".Wafil.print.activity_print_main_2"/>
+        <activity android:name=".Wafil.print.activity_print_main" />
+        <activity android:name=".Wafil.print.activity_print_main_2" />
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />

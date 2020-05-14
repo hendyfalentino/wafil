@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wafil.Wafil.bengkel.BengkelMainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00BCD4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="#FFFFFF" />
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/home"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/home"
+        android:tint="#00FFFFFF" />
+
+
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/set"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/set"
+        android:tint="#00FFFFFF" />
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/acc"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/acc"
+        android:tint="#00FFFFFF" />
+
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:id="@+id/onderdil"
+        android:paddingLeft="220dp"
+        android:paddingRight="18dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/payment"
+        android:scaleType="centerInside"
+        android:tint="#00FFFFFF" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PEMBAYARAN"
+        android:textSize="25dp"
+        android:textStyle="normal|bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="590dp"
+        android:layout_marginStart="100dp"/>
+
+    <EditText
+        android:id="@+id/harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="210dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Harga"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/jumlah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/harga"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="nama barang"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jumlah"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="total"
+        android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/ket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="keterangan"
+        android:inputType="text" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="400dp"
+        android:id="@+id/coin"
+        android:paddingLeft="80dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/coin1"
+        android:scaleType="fitCenter"
+        android:tint="#00FFFFFF"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20000"
+        android:textSize="20dp"
+        android:textStyle="normal|bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="50dp"/>
+
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="400dp"
+        android:id="@+id/coin1"
+        android:paddingLeft="10dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/coin"
+        android:scaleType="fitCenter"
+        android:tint="#00FFFFFF" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginVertical="240dp"
+        android:text="ISI SALDO?"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="15dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="550dp"
+        android:id="@+id/checklist"
+        android:paddingLeft="8dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/checklist"
+        android:scaleType="centerInside"
+        android:tint="#00FFFFFF" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="550dp"
+        android:id="@+id/cancel"
+        android:paddingLeft="10dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/cancel"
+        android:scaleType="centerInside"
+        android:tint="#00FFFFFF" />
+
+</RelativeLayout>

@@ -2,15 +2,15 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_menu_frag"
-    app:startDestination="@id/fr_beranda">
+    android:id="@+id/nav_menu_frag_chef"
+    app:startDestination="@id/fr_beranda3">
 
 
 
     <fragment
-        android:id="@+id/fr_beranda"
+        android:id="@+id/fr_beranda3"
         android:name="com.example.wafil.Wafil.chefCook.fragments.BerandaFrag"
-        android:label="fragment_beranda"
+        android:label="fragment_beranda_chef"
         tools:layout="@layout/fragment_beranda_chef" />
 
     <fragment

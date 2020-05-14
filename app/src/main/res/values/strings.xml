@@ -12,6 +12,10 @@
     <string name="string_nav_order">Pesanan</string>
     <string name="string_nav_account">Akun</string>
 
+    <string name="log_in">Log In</string>
+    <string name="username">Username</string>
+    <string name="login_form">Login Form</string>
+    <string name="keluar">Keluar</string>
     //Account
     <string name="accout_nama">Nama kamu</string>
     <string name="accout_nomor">08xx-xxxx-1234</string>

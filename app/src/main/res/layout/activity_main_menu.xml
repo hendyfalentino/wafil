@@ -403,9 +403,9 @@
                         android:layout_height="wrap_content">
 
                         <Button
-                            android:id="@+id/btn_babysitter"
+                            android:id="@+id/btn_bengkel"
                             android:background="@drawable/bg_main"
-                            android:text="BS"
+                            android:text="BENGKEL"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:fontFamily="@font/productsansbold"

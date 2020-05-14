@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wafil.Wafil.bengkel.BengkelMainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00BCD4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="#FFFFFF" />
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/home"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/home"
+        android:tint="#00FFFFFF" />
+
+
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/set"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/set"
+        android:tint="#00FFFFFF" />
+
+    <ImageButton
+        android:text="BENGKOL"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/acc"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/acc"
+        android:tint="#00FFFFFF" />
+
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:id="@+id/LB"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="75dp"
+        android:textAlignment="center"
+        android:text="Laporan Bayar"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="normal|bold" />
+
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_below="@+id/LB"
+        android:id="@+id/LP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="130dp"
+        android:textAlignment="center"
+        android:text="Laporan Penjualan"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="normal|bold" />
+
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_below="@+id/LP"
+        android:id="@+id/LPP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="186dp"
+        android:textAlignment="center"
+        android:text="Laporan Pelanggan"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="normal|bold" />
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_below="@+id/LPP"
+        android:id="@+id/LPD"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="242dp"
+        android:textAlignment="center"
+        android:text="Laporan Pendapatan"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="normal|bold" />
+    <ImageButton
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_below="@+id/LPD"
+        android:id="@+id/LT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/white"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="300dp"
+        android:textAlignment="center"
+        android:text="Laporan Teknisi"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="normal|bold" />
+
+</RelativeLayout>

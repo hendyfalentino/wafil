@@ -22,7 +22,7 @@ public class ChefMainActivity extends AppCompatActivity {
     View hostFragment;
     NavController navController;
 
-    Button home, order, akun;
+    Button home, order, akun, t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class ChefMainActivity extends AppCompatActivity {
         home = findViewById(R.id.btHome);
         order = findViewById(R.id.btOrder);
         akun = findViewById(R.id.btAccount);
+        t = findViewById(R.id.nav_menu_frag_chef);
 
         home.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), Beranda.class));
@@ -77,11 +78,11 @@ public class ChefMainActivity extends AppCompatActivity {
 
 //        type2
 //        bottomNavigationView.findViewById(R.id.bottomNavView);
-//        navhost = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_menu_frag);
+//        navhost = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_menu_frag_bas);
 //        NavigationUI.setupWithNavController(bottomNavigationView, navhost.getNavController());
 
 //        type1
-//        navController = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_menu_frag);
+//        navController = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_menu_frag_bas);
 //        bottomNavigationView = findViewById(R.id.bottomNavView);
 //        bottomNavigationView.setOnNavigationItemSelectedListener(navlistener);
 //        getSupportFragmentManager().beginTransaction()

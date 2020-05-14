@@ -21,7 +21,7 @@ public class MapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_print_main);
+        setContentView(R.layout.activity_print_lokasi);
 
          // Saat tombol pilih tempat di-klik
         findViewById(R.id.open_place_picker_button).setOnClickListener(new View.OnClickListener() {

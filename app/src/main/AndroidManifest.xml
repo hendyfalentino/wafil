@@ -36,9 +36,9 @@
         <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U" />
+            android:value="AIzaSyBY8gTcaaQ6tuBkCAMHrfAe_rbpcAIdx1U"/>
 
-        <activity android:name=".Wafil.wafil.ServiceTypeActivity" />
+        <activity android:name=".Wafil.wafil.ServiceTypeActivity"></activity>
         <activity android:name=".Wafil.wafil.ProductActivity" />
         <activity android:name=".Wafil.MenuActivity" />
         <activity android:name=".Wafil.giziTest.SignUp"/>
@@ -88,6 +88,8 @@
         <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail" />
         <activity android:name=".Wafil.print.MapActivity" />
         <activity android:name=".Wafil.print.PlacePickerActivity" />
+        <activity android:name=".Wafil.print.activity_print_main"/>
+        <activity android:name=".Wafil.print.activity_print_main_2"/>
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />

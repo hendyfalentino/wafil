@@ -19,8 +19,8 @@ import com.example.wafil.Wafil.basBangunan.BasBangunanMainActivity;
 import com.example.wafil.Wafil.bengkel.BengkelMainActivity;
 import com.example.wafil.Wafil.chefCook.ChefMainActivity;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
+import com.example.wafil.Wafil.chilyoHouze.activity_print_main;
 import com.example.wafil.Wafil.giziTest.SignUp;
-import com.example.wafil.Wafil.print.*;
 import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
@@ -54,7 +54,7 @@ public class MainMenuActivity extends Fragment {
         btn_print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), activity_print_main_2.class);
+                Intent intent = new Intent(getActivity(), activity_print_main.class);
                 startActivity(intent);
             }
         });

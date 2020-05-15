@@ -234,7 +234,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/pay_book_now"
+            android:id="@+id/pay_book"
             android:text="BAYAR"
             android:layout_width="match_parent"
             android:layout_height="50dp"

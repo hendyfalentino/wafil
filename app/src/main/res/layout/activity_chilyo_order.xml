@@ -197,7 +197,7 @@
                 android:id="@+id/rv_orderItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/payment_item"/>
+                tools:listitem="@layout/payment_item" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

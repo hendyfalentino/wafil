@@ -26,7 +26,7 @@ import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 public class MainMenuActivity extends Fragment {
 
     Button btn_wafil, btn_print, btn_chilyo, btn_atorjo, btn_basbangunan, btn_gizitest, btn_market,
-            btn_chefcook, btn_benkel, btn_babysitter;
+            btn_chefcook, btn_benkel, btn_babysitter, btn_tukangku;
 
     @Nullable
     @Override
@@ -43,6 +43,7 @@ public class MainMenuActivity extends Fragment {
         btn_chefcook = v.findViewById(R.id.btn_chefcook);
         btn_benkel = v.findViewById(R.id.btn_bengkel);
         btn_babysitter = v.findViewById(R.id.btn_babysitter);
+        btn_tukangku = v.findViewById(R.id.btn_tukangku);
 
         btn_wafil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +109,13 @@ public class MainMenuActivity extends Fragment {
             }
         });
         btn_babysitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), BabyLoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_tukangku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), BabyLoginActivity.class);

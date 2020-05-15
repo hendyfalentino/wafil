@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Wafil.atorJo.atorjoCart"></activity>
+        <activity android:name=".Wafil.tukangKu.TukangKuMainActivity"></activity>
+        <activity android:name=".Wafil.atorJo.atorjoCart" />
         <activity android:name=".Wafil.atorJo.atorjoHistory" />
         <activity android:name=".Wafil.bengkel.BengkelMainActivity" />
         <activity android:name=".Wafil.chefCook.ChefMainActivity" />
@@ -86,7 +87,7 @@
         <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail" />
         <activity android:name=".Wafil.print.MapActivity" />
         <activity android:name=".Wafil.print.PlacePickerActivity" />
-        <activity android:name=".Wafil.chilyoHouze.activity_print_main"/>
+        <activity android:name=".Wafil.chilyoHouze.activity_print_main" />
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />
@@ -112,6 +113,9 @@
         <activity android:name=".Wafil.babySitter.RecyclerviewActivity" />
         <activity android:name=".Wafil.babySitter.RiwayatActivity" />
         <activity android:name=".Wafil.babySitter.UserActivity" />
+        <activity android:name=".Wafil.tukangKu.TukangListActivity" />
+        <activity android:name=".Wafil.tukangKu.RatingActivity" />
+        <activity android:name=".Wafil.tukangKu.OrderActivity" />
     </application>
 
 </manifest>

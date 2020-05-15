@@ -1,78 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="Wafil.chefCook.Page.Order">
-
-    <RelativeLayout
-        android:id="@+id/rlayout1"
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="24dp"
+    android:orientation="vertical">
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#8A1F1F"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            app:srcCompat="@drawable/chefcook_italic" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Tukang"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/gray"/>
 
-        <TextView
-            android:id="@+id/txtviewhead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toStartOf="@id/bttini"
-            android:layout_toEndOf="@id/imageView2"
-            android:layout_toRightOf="@id/bttini"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_work_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status : "
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/bttini"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:layout_margin="10dp"
-            android:layout_marginEnd="1dp"
-            android:layout_toStartOf="@id/imageView2"
-            android:background="@drawable/rounded_button"
-            android:backgroundTint="@color/White" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rlayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rlayout1">
-
-        <LinearLayout
+            android:id="@+id/btn_rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="BERI RATING"
+            android:visibility="gone"
+            android:layout_above="@id/btn_order"
+            android:layout_marginBottom="16dp"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"/>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_margin="18dp"
-                android:padding="25dp"
-                android:backgroundTint="@color/Blue"
-                app:cardCornerRadius="24dp"
-                app:cardPreventCornerOverlap="true"
-                />
+        <Button
+            android:id="@+id/btn_cancel_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BATALKAN PESANAN"
+            android:visibility="visible"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:layout_above="@+id/btn_order"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PESAN TUKANG INI"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"/>
 
-
-        </LinearLayout>
     </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

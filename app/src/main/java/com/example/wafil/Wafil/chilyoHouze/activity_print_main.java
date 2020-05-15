@@ -1,4 +1,4 @@
-package com.example.wafil.Wafil.print;
+package com.example.wafil.Wafil.chilyoHouze;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,11 +20,6 @@ import com.example.wafil.Wafil.chilyoHouze.Adapters.MainServiceVendorOnlineAdapt
 import com.example.wafil.Wafil.chilyoHouze.Model.VendorMainOnline;
 import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.CustomProgressBar;
-import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_haircare;
-import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_history;
-import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_makeup;
-import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_selfnail;
-import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_spa;
 
 import java.util.List;
 
@@ -51,22 +46,22 @@ public class activity_print_main extends AppCompatActivity {
         recyclerView = findViewById(R.id.main_service_vendor_view);
 
         elementInit();
-        //getJson();
+        getJson();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //getJson();
+        getJson();
     }
 
     private void elementInit(){
 
-        // inisialisasi progress bar
+        //// inisialisasi progress bar
         //progress = new CustomProgressBar();
 
-        ImageView backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        ImageView activity_chilyo_back = findViewById(R.id.backButton);
+        activity_chilyo_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -92,22 +87,43 @@ public class activity_print_main extends AppCompatActivity {
         //        startActivity(intentSettings);
         //    }
         //});
-
-        //// go to print
-        //LinearLayout acitvity_print_print_button = findViewById(R.id.activity_print_print);
-        //acitvity_print_print_button.setOnClickListener(new View.OnClickListener() {
+        //
+        //// go to Make Up
+        //LinearLayout acitvity_chilyo_make_up_button = findViewById(R.id.activity_chilyo_makeUp);
+        //acitvity_chilyo_make_up_button.setOnClickListener(new View.OnClickListener() {
         //    @Override
         //    public void onClick(View v) {
-        //        intentSettings = new Intent(activity_print_main.this, activity_print_filter.class);
+        //        intentSettings = new Intent(activity_print_main.this, activity_chilyo_makeup.class);
         //        startActivities(intentSettings);
         //    }
         //});
-        //// go to scan
-        //LinearLayout acitvity_print_scan_button = findViewById(R.id.acitvity_print_scan);
-        //acitvity_print_scan_button.setOnClickListener(new View.OnClickListener() {
+        //
+        //// go to Self Nail
+        //ImageView acitvity_chilyo_self_nail_button = findViewById(R.id.acitvity_chilyo_self_nail_button);
+        //acitvity_chilyo_self_nail_button.setOnClickListener(new View.OnClickListener() {
         //    @Override
         //    public void onClick(View v) {
-        //        intentSettings = new Intent(activity_print_main.this, activity_print_filter.class);
+        //        intentSettings = new Intent(activity_print_main.this, activity_chilyo_selfnail.class);
+        //        startActivities(intentSettings);
+        //    }
+        //});
+        //
+        //// go to Spa
+        //ImageView acitvity_chilyo_spa_button = findViewById(R.id.acitvity_chilyo_spa_button);
+        //acitvity_chilyo_spa_button.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        intentSettings = new Intent(activity_print_main.this, activity_chilyo_spa.class);
+        //        startActivities(intentSettings);
+        //    }
+        //});
+        //
+        //// go to HairCare
+        //ImageView acitvity_chilyo_hair_care_button = findViewById(R.id.acitvity_chilyo_hair_care_button);
+        //acitvity_chilyo_hair_care_button.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
+        //        intentSettings = new Intent(activity_print_main.this, activity_chilyo_haircare.class);
         //        startActivities(intentSettings);
         //    }
         //});
@@ -120,7 +136,7 @@ public class activity_print_main extends AppCompatActivity {
     private void getJson(){
         //progress.show(this, "Loading");
         ApiInterface service = ApiClient.getRetrofitInstance().create(ApiInterface.class);
-        Call<List<VendorMainOnline>> call = service.getOnlineVendors("180");
+        Call<List<VendorMainOnline>> call = service.getOnlineVendors("210");
         call.enqueue(new Callback<List<VendorMainOnline>>() {
             @Override
             public void onResponse(Call<List<VendorMainOnline>> call, Response<List<VendorMainOnline>> response) {

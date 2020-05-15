@@ -86,8 +86,7 @@
         <activity android:name=".Wafil.chilyoHouze.MainServiceAndProduct.ProductDetail" />
         <activity android:name=".Wafil.print.MapActivity" />
         <activity android:name=".Wafil.print.PlacePickerActivity" />
-        <activity android:name=".Wafil.print.activity_print_main" />
-        <activity android:name=".Wafil.print.activity_print_main_2" />
+        <activity android:name=".Wafil.chilyoHouze.activity_print_main"/>
         <activity android:name=".Wafil.atorJo.bersihRumah" />
         <activity android:name=".Wafil.atorJo.pengemasBarang" />
         <activity android:name=".Wafil.atorJo.bersihKantor" />

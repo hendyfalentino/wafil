@@ -38,26 +38,26 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"/>
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/activity_chilyo_history"-->
-<!--                    android:layout_width="@dimen/icon_size"-->
-<!--                    android:layout_height="@dimen/icon_size"-->
-<!--                    android:layout_marginRight="25dp"-->
-<!--                    android:src="@drawable/ic_to_do"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintRight_toLeftOf="@id/activity_chilyo_cart"-->
-<!--                    />-->
+                <ImageView
+                    android:id="@+id/activity_chilyo_history"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginRight="25dp"
+                    android:src="@drawable/ic_to_do"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/activity_chilyo_cart"
+                    />
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/activity_chilyo_cart"-->
-<!--                    android:layout_width="@dimen/icon_size"-->
-<!--                    android:layout_height="@dimen/icon_size"-->
-<!--                    android:src="@drawable/ic_shopping_bag"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintRight_toRightOf="parent"-->
-<!--                    />-->
+                <ImageView
+                    android:id="@+id/activity_chilyo_cart"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:src="@drawable/ic_shopping_bag"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -78,11 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"
-                android:shadowColor="@color/gray"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="1"
-                android:text="Kebutuhan print dalam genggaman."
+                android:text="Print kini lebih mudah."
                 android:textColor="#000"
                 android:textSize="20sp" />
 
@@ -90,12 +86,21 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/productsansbold"
-                android:text="Pilih layanan"
+                android:text="Layanan"
+                android:textSize="17sp"
                 android:textColor="#000000"
-                android:textSize="17sp" />
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/productsansbold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Perlu apa hari ini?"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/productsansregular"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -103,7 +108,7 @@
 
                 <!-- tombol print -->
                 <LinearLayout
-                    android:id="@+id/activity_print_print"
+                    android:id="@+id/activity_chilyo_makeUp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -112,7 +117,7 @@
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
-                        android:id="@+id/acitvity_print_button"
+                        android:id="@+id/acitvity_chilyo_make_up_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/print_icon_print_black" />
@@ -131,16 +136,16 @@
 
                 <!-- tombol scan -->
                 <LinearLayout
-                    android:id="@+id/acitvity_print_scan"
+                    android:id="@+id/acitvity_chilyo_self_nail"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/activity_print_print"
+                    app:layout_constraintLeft_toRightOf="@id/activity_chilyo_makeUp"
                     app:layout_constraintWidth_percent="0.25">
 
                     <ImageView
-                        android:id="@+id/acitvity_scan_button"
+                        android:id="@+id/acitvity_chilyo_self_nail_button"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
                         android:src="@drawable/print_icon_scanner_bw" />
@@ -157,6 +162,62 @@
 
                 </LinearLayout>
 
+                <!-- tombol spa -->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/acitvity_chilyo_spa"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_self_nail"-->
+<!--                    app:layout_constraintWidth_percent="0.25">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/acitvity_chilyo_spa_button"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:src="@drawable/logo_spa" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Spa"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:fontFamily="@font/productsansbold"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:layout_marginTop="7dp"-->
+<!--                        android:textColor="#000"/>-->
+
+<!--                </LinearLayout>-->
+
+                <!-- tombol hair care -->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/acitvity_chilyo_hair_care"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintLeft_toRightOf="@id/acitvity_chilyo_spa"-->
+<!--                    app:layout_constraintWidth_percent="0.25">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/acitvity_chilyo_hair_care_button"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="65dp"-->
+<!--                        android:src="@drawable/logo_hair_care" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Hair Care"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:fontFamily="@font/productsansbold"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:layout_marginTop="7dp"-->
+<!--                        android:textColor="#000"/>-->
+
+<!--                </LinearLayout>-->
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
@@ -169,7 +230,35 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            app:layout_constraintTop_toBottomOf="@id/services_chooser"/>
+            app:layout_constraintTop_toBottomOf="@id/services_chooser">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tempat print yang lagi siap:"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/productsansbold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dipilih-dipilih mba/mas layanannya"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/productsansregular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_service_vendor_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/main_service_vendor_online_item"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -25,7 +25,6 @@ import java.util.List;
 
 public class ServiceTypeActivity extends AppCompatActivity {
 
-
     RecyclerView recyclerView;
     MainServiceVendorOnlineAdapter adapter;
     List<VendorMainOnline> vendorMainOnlineList;

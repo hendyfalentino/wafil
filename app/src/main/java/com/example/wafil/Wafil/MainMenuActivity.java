@@ -21,6 +21,7 @@ import com.example.wafil.Wafil.chefCook.ChefMainActivity;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_main;
 import com.example.wafil.Wafil.chilyoHouze.activity_print_main;
 import com.example.wafil.Wafil.giziTest.SignUp;
+import com.example.wafil.Wafil.tukangKu.TukangKuMainActivity;
 import com.example.wafil.Wafil.wafil.ServiceTypeActivity;
 
 public class MainMenuActivity extends Fragment {
@@ -118,7 +119,7 @@ public class MainMenuActivity extends Fragment {
         btn_tukangku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), BabyLoginActivity.class);
+                Intent intent = new Intent(getActivity(), TukangKuMainActivity.class);
                 startActivity(intent);
             }
         });

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Wafil.atorJo.atorjoHistory"></activity>
+        <activity android:name=".Wafil.atorJo.atorjoCart"></activity>
+        <activity android:name=".Wafil.atorJo.atorjoHistory" />
         <activity android:name=".Wafil.bengkel.BengkelMainActivity" />
         <activity android:name=".Wafil.chefCook.ChefMainActivity" />
         <activity android:name=".Wafil.chefCook.AdminDashboard" />

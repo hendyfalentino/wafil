@@ -70,7 +70,7 @@ public class Activity2 extends AppCompatActivity {
         activity_history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intentSetting =  new Intent(Activity2.this, activity_chilyo_history.class);
+                intentSetting =  new Intent(Activity2.this, activity_chilyo_hi.class);
                 startActivities(intentSetting);
             }
         });

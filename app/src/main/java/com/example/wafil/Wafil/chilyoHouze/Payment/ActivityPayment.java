@@ -25,6 +25,7 @@ import com.example.wafil.Wafil.chilyoHouze.ShoppingCart.ActivityShoppingCart;
 import com.example.wafil.Wafil.chilyoHouze.Support.CustomProgressBar;
 import com.example.wafil.Wafil.chilyoHouze.Support.Support;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_order;
+import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_rating;
 import com.example.wafil.Wafil.chilyoHouze.activity_chilyo_topup;
 
 import java.util.HashMap;
@@ -117,12 +118,11 @@ public class ActivityPayment extends AppCompatActivity {
                         Toast.makeText(ActivityPayment.this, "Balance Not Enough!"+toString(), Toast.LENGTH_SHORT).show();
                     }
                     else if(error_msg_.equals("PAYMENT_COMPLETED")){
-                        Toast.makeText(ActivityPayment.this, "Paid!"+toString(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ActivityPayment.this, activity_chilyo_rating.class);
+                        startActivity(intent);
                     }
                     Log.d("GetData", response.body().getKode());
                 }
-                // coba tes jo dlu
-                /// kse kosong dlutabel shopping cart OKE
                 bar_.getDialog().dismiss();
             }
 

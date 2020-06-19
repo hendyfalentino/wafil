@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -57,9 +57,9 @@ dependencies {
     implementation 'com.sucho:placepicker:1.1.1'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.material:material:1.1.0'
-    implementation 'com.google.android.libraries.places:places:2.2.0'
-    implementation "androidx.core:core-ktx:+"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+    implementation "androidx.core:core-ktx"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.android.gms:play-services-location:17.0.0'
 
@@ -72,8 +72,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
-    implementation 'com.google.firebase:firebase-messaging:20.1.7'
-    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
 }
 repositories {
     mavenCentral()
